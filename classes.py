@@ -23,7 +23,8 @@ class monster:
         self.absorb = absorb
         self.name = name
     
-    def attack()
+    def attack(self)
+    
 
 
 # Declare monsters

@@ -19,14 +19,12 @@ class monster:
         self.absorb = absorb
         self.name = name
     
-class spell:
-    def __init__(self,damage,stun,dark):
-        self.damage = damage
-        self.stun = stun
-        self.dark = dark
+    def dark(self,hit):
+        self.hit - hit
+
 
 # Declare monsters
-imp = monster(50,10,0.5,1,"imp")
+bartender = monster(50,10,0.5,1,"Bartender")
 troll = monster(50,15,0.7,1,"troll")
 wolf = monster(80,25,0.6,2,"wolf")
 bone = monster(120,30,0.8,2,"bone")
@@ -46,15 +44,3 @@ silver = weapon(55,0.82,"Silver Mace",3)
 titanium = weapon(75,0.92,"Titanium Halberd",4)
 gold = weapon(80,0.95,"Golden Scimitar",5)
 diamond = weapon(100,0.98,"Diamond Greatsword",6)
-
-def options():
-    print("1. Search Around")
-    print("")
-    print("")
-
-
-
-while won != true:
-    print("You are in a dark room")
-
-    input("")

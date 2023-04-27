@@ -7,10 +7,6 @@ class weapon:
         self.name = name
     
     
-class location:
-    def __init__(self,monster):
-        self.monster = monster
-
 class monster:
     def __init__(self,hp,power,hit,level,name):
         self.hp = hp

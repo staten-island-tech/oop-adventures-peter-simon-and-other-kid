@@ -18,7 +18,9 @@ class monster:
     def dark(self,hit):
         self.hit - hit
 
-
+class armor:
+    def __init__(self,bonus):
+        self.bonus = bonus
 # Declare monsters
 bartender = monster(50,10,0.5,1,"Bartender")
 troll = monster(50,15,0.7,1,"troll")

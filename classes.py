@@ -16,8 +16,8 @@ class monster:
         self.hp = hp
         self.power = power
         self.hit = hit
-        self.absorb = absorb
         self.name = name
+        self.level = level
     
     def dark(self,hit):
         self.hit - hit

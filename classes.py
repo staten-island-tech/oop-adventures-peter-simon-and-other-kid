@@ -6,6 +6,10 @@ class weapon:
         self.hit = hit
         self.name = name
     
+    def equip(self):
+        p_hit = self.hit
+        p_power = self.power
+    
     
 class monster:
     def __init__(self,hp,power,hit,level,name):
@@ -21,6 +25,10 @@ class monster:
 class armor:
     def __init__(self,bonus):
         self.bonus = bonus
+    
+    def equip(self):
+        hp = 100 + self.bonus
+        
 # Declare monsters
 bartender = monster(50,10,0.5,1,"Bartender")
 troll = monster(50,15,0.7,1,"troll")

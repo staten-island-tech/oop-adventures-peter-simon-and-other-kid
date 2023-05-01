@@ -1,3 +1,7 @@
+import random
+
+def test(prob):
+    return random.randint(0,1) > prob
 
 
 class weapon:
@@ -22,6 +26,19 @@ class monster:
     def dark(self,hit):
         self.hit - hit
 
+class boss(monster):
+    def __init__(self,hp,power,hit,level,name,magic)
+    self.magic = magic
+    super().__init__(hp,power,hit,level,name)
+
+
+    def nuke():
+        nuke_damage = 50 + random.randint(0, 10)
+        if test(self.magic):
+            change_hp(nuke_damage)
+        else:
+            print("Nuke was ineffective")
+
 class armor:
     def __init__(self,bonus):
         self.bonus = bonus
@@ -29,6 +46,7 @@ class armor:
     def equip(self):
         hp = 100 + self.bonus
         
+
 # Declare monsters
 bartender = monster(50,10,0.5,1,"Bartender")
 troll = monster(50,15,0.7,1,"troll")
@@ -41,7 +59,7 @@ medusa = monster(200,35,0.9,3,"medusa")
 kary = monster(300,50,0.85,4,"kary")
 kraken = monster(400,60,0.8,4,"kraken")
 tiamat = monster(420,40,0.95,4,"tiamat")
-chaos = monster(600,80,0.9,5,"CHAOS")
+chaos = boss(600,80,0.9,5,"CHAOS",0.8)
 
 # Declare weapons
 wooden = weapon(30,0.7,"Wooden Sword",1)

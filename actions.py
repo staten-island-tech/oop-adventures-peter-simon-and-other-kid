@@ -17,7 +17,6 @@ def change_hp(hp,HP,hp_t):
         print(f"Your hp was decreased by {abs(HP)} ")
     print(f"Your current hp is {hp}")
 
-change_hp(50)
 def change_exp(exp, EXP):
     exp += EXP
     if EXP >= 0:

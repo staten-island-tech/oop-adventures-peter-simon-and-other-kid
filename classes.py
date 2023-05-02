@@ -40,7 +40,7 @@ class boss(monster):
             print("Nuke was ineffective")
 
 class armor:
-    def __init__(self,bonus):
+    def __init__(self,bonus,name):
         self.bonus = bonus
     
     def equip(self):
@@ -68,3 +68,11 @@ silver = weapon(55,0.82,"Silver Mace")
 titanium = weapon(75,0.92,"Titanium Halberd")
 gold = weapon(80,0.95,"Golden Scimitar")
 diamond = weapon(100,0.98,"Diamond Greatsword")
+
+#Declare armor
+leather = armor(10, "Leather Armor")
+iron = armor(20, "Iron Armor")
+silver = armor(40,"Silver Armor")
+titanium = armor(75, "Titanium Armor")
+gold = armor(100, "Gold Armor")
+diamond = armor(150, "Diamond") 

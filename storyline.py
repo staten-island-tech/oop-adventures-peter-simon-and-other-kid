@@ -101,9 +101,10 @@ def shop():
                 elif gold < 500:
                     print("SHOPKEEPER: Your body pillow is sad now.")
         if goodsChoice == 2:
-            armor_choice = input(int("SHOPKEEPER: Are you going commando? 1: Buy leather armor, 2: Buy iron armor, 3: BUy silver armor, 4: Buy titanium armor, 5: Buy gold armor, 6: Buy diamond armor"))
+            armor_choice = input(int("SHOPKEEPER: Are you going commando? 1: Buy leather armor, 2: Buy iron armor, 3: Buy silver armor, 4: Buy titanium armor, 5: Buy gold armor, 6: Buy diamond armor"))
             if armor_choice == 1:
-                if gold 
+                if gold >= 100:
+                    print('')
 
 
 shop()
@@ -130,5 +131,5 @@ def impDialogue():
         if lunatic == 2:
             print('No one wins. No one loses. The fight ends.')
         if lunatic == 3:
-            print("You scream some lines from those corny kids' movies and make a complete fool of yourself. You lose 1 HP.")
+            print("You scream some lines from those corny kids' movies and make a complete fool of yourself. The imp get away and you lose 1 HP.")
             change_hp(hp,-1,hp_t)

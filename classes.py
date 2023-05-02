@@ -27,9 +27,9 @@ class monster:
         self.hit - hit
 
 class boss(monster):
-    def __init__(self,hp,power,hit,level,name,magic)
-    self.magic = magic
-    super().__init__(hp,power,hit,level,name)
+    def __init__(self,hp,power,hit,level,name,magic):
+        self.magic = magic
+        super().__init__(hp,power,hit,level,name)
 
 
     def nuke():
@@ -62,9 +62,9 @@ tiamat = monster(420,40,0.95,4,"tiamat")
 chaos = boss(600,80,0.9,5,"CHAOS",0.8)
 
 # Declare weapons
-wooden = weapon(30,0.7,"Wooden Sword",1)
-iron = weapon(50,0.8,"Iron Sword",2)
-silver = weapon(55,0.82,"Silver Mace",3)
-titanium = weapon(75,0.92,"Titanium Halberd",4)
-gold = weapon(80,0.95,"Golden Scimitar",5)
-diamond = weapon(100,0.98,"Diamond Greatsword",6)
+wooden = weapon(30,0.7,"Wooden Sword")
+iron = weapon(50,0.8,"Iron Sword")
+silver = weapon(55,0.82,"Silver Mace")
+titanium = weapon(75,0.92,"Titanium Halberd")
+gold = weapon(80,0.95,"Golden Scimitar")
+diamond = weapon(100,0.98,"Diamond Greatsword")

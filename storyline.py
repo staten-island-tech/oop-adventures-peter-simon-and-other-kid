@@ -103,11 +103,16 @@ def shop():
             print()
 
 shop()
-""" 
+
 def impDialogue():
     print("Order on the Domino's app and earn points towards free pizza!")
     pizzaChoice = int(input("Order on the Domino's App? 1: Yes, 2: No, 3: Act stupid"))
     if pizzaChoice == 1:
-        eatPizza = int(input('The imp hands you his pizza. Eat some? 1: Yes, 2: No, 3: Shove it down his throat')) # If I had a nickel for every time I ate a whole pizza pie in this building, I'd have two nickels.
+        eatPizza = int(input('The imp hands you his pizza. Eat some? 1: Yes, 2: No, 3: Shove it down his throat')) # If I had a nickel for every time I ate a whole pizza pie in this building, I'd have two (soon three) nickels.
         if eatPizza == 1:
-            print('There are shared needles on it and you lose 50 HP.') """
+            print('There are expired booges on it and you lose 50 HP.')
+            change_hp(-50)
+        if eatPizza == 2:
+            print('You reject the offer. Nothing happens.')
+        if eatPizza == 3:
+            print('')

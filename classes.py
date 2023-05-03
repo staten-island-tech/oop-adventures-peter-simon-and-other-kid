@@ -1,5 +1,5 @@
 import random
-
+from actions import *
 def test(prob):
     return random.randint(0,1) > prob
 
@@ -11,8 +11,9 @@ class weapon:
         self.name = name
     
     def equip(self):
-        p_hit = self.hit
-        p_power = self.power
+        hit = self.hit
+        power = self.power
+        weapon = self.name
     
     
 class monster:
@@ -23,6 +24,14 @@ class monster:
         self.name = name
         self.level = level
     
+    def attack(self):
+        random_p = int(power * (random.randint(80, 120)/100))
+        print(f"The {self.name} takes {random_p} damage")
+        self.hp -= random_p
+        if self.hp < 0:
+            self.hp = 0
+        print(f"The {self.name}'s new hp is {self.hp}")
+
     def dark(self,hit):
         self.hit - hit
 
@@ -45,6 +54,7 @@ class armor:
     
     def equip(self):
         hp = 100 + self.bonus
+        armor = self.name
         
 
 # Declare monsters

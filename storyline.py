@@ -1,5 +1,6 @@
 from classes import *
 from actions import *
+from attack import *
 
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave'))
@@ -48,6 +49,7 @@ def shop():
             if weaponChoice == 1:
                 if gold >= 50:
                     equipChoice = int(input('You now have Iron Sword. Equip sword? 1: Yes, 2: No'))
+                    change_gold(-50)
                     if equipChoice == 1:
                         equip(Iron)
                     elif equipChoice == 2:
@@ -59,6 +61,7 @@ def shop():
             if weaponChoice == 2:
                 if gold >= 100:
                     equipChoice = int(input('You now have Silver Sword. Equip sword? 1: Yes, 2: No'))
+                    change_gold(-100)
                     if equipChoice == 1:
                         equip(Silver)
                     elif equipChoice == 2:
@@ -70,6 +73,7 @@ def shop():
             if weaponChoice == 3:
                 if gold >= 200:
                     equipChoice = int(input('You now have Titanium Sword. Equip sword? 1: Yes, 2: No'))
+                    change_gold(-200)
                     if equipChoice == 1:
                         equip(Titanium)
                     elif equipChoice == 2:
@@ -81,6 +85,7 @@ def shop():
             if weaponChoice == 4:
                 if gold >= 350:
                     equipChoice = int(input('You now have Gold Sword. Equip sword? 1: Yes, 2: No'))
+                    change_gold(-350)
                     if equipChoice == 1:
                         equip(Gold)
                     elif equipChoice == 2:
@@ -92,6 +97,7 @@ def shop():
             if weaponChoice == 5:
                 if gold >= 500:
                     equipChoice = int(input('You now have Diamond Sword. Equip sword? 1: Yes, 2: No'))
+                    change_gold(-500)
                     if equipChoice == 1:
                         equip(Diamond)
                     elif equipChoice == 2:
@@ -104,8 +110,64 @@ def shop():
             armor_choice = input(int("SHOPKEEPER: Are you going commando? 1: Buy leather armor, 2: Buy iron armor, 3: Buy silver armor, 4: Buy titanium armor, 5: Buy gold armor, 6: Buy diamond armor"))
             if armor_choice == 1:
                 if gold >= 100:
-                    print('')
-
+                    equipChoice = int(input('You now have Leather Armor. Equip armor? 1: Yes, 2: No'))
+                    change_gold(-100)
+                    if equipChoice == 1:
+                        equip(Leather)
+                    elif equipChoice == 2:
+                        print('Nothing happens.')
+                elif gold < 100:
+                    print('SHOPKEEPER: Typical.')
+            if armor_choice == 2:
+                if gold >= 200:
+                    equipChoice = int(input('You now have Iron Armor. Equip armor? 1: Yes, 2: No'))
+                    change_gold(-200)
+                    if equipChoice == 1:
+                        equip(Iron)
+                    elif equipChoice == 2:
+                        print('Nothing happens.')
+                elif gold < 200:
+                    print('SHOPKEEPER: Stop being poor.')
+            if armor_choice == 3:
+                if gold >= 300:
+                    equipChoice = int(input('You now have Silver Armor. Equip armor? 1: Yes, 2: No'))
+                    change_gold(-300)
+                    if equipChoice == 1:
+                        equip(Silver)
+                    elif equipChoice == 2:
+                        print('Nothing happens.')
+                elif gold < 200:
+                    print('SHOPKEEPER: Buy a silver spoon and come back.')
+            if armor_choice == 4:
+                if gold >= 400:
+                    equipChoice = int(input('You now have Titanium Armor. Equip armor? 1: Yes, 2: No'))
+                    change_gold(-400)
+                    if equipChoice == 1:
+                        equip(Titanium)
+                    elif equipChoice == 2:
+                        print('Nothing happens.')
+                elif gold < 400:
+                    print("SHOPKEEPER: Don't wet yourself.")
+            if armor_choice == 5:
+                if gold >= 500:
+                    equipChoice = int(input('You now have Gold Armor. Equip armor? 1: Yes, 2: No'))
+                    change_gold(-500)
+                    if equipChoice == 1:
+                        equip(Gold)
+                    elif equipChoice == 2:
+                        print('Nothing happens.')
+                elif gold < 500:
+                    print("SHOPKEEPER: Try pyrite. It's much better for you.")
+            if armor_choice == 6:
+                if gold >= 600:
+                    equipChoice = int(input('You now have Diamond Armor. Equip armor? 1: Yes, 2: No'))
+                    change_gold(-600)
+                    if equipChoice == 1:
+                        equip(Diamond)
+                    elif equipChoice == 2:
+                        print('Nothing happens.')
+                elif gold < 600:
+                    print("SHOPKEEPER: Shove diamonds down the toilet and see what happens.")
 
 shop()
 
@@ -133,3 +195,9 @@ def impDialogue():
         if lunatic == 3:
             print("You scream some lines from those corny kids' movies and make a complete fool of yourself. The imp get away and you lose 1 HP.")
             change_hp(hp,-1,hp_t)
+
+def trollDialogue():
+    print("Troll: U MAD BRO?")
+    dialogueChoice = int(input('1: Stare in confusion, 2: Pound his face in, 3: Recite the Bee Movie script'))
+    if dialogueChoice == 1:
+        print('Troll: ')

@@ -1,5 +1,8 @@
 import random
 from actions import *
+
+
+magic = {}
 def test(prob):
     return random.randint(0,1) > prob
 

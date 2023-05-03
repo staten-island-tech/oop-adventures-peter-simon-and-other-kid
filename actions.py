@@ -3,7 +3,10 @@ hp = 100
 hp_t = 100
 exp = 0 
 gold = 100
-
+hit = 0.7
+power = 30
+item = "Wooden Sword"
+armor = "none"
 
 def change_hp(hp,HP,hp_t):
     print(hp)

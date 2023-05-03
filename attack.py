@@ -1,5 +1,5 @@
 from classes import *
-#from storyline import *
+from storyline import *
 from actions import *
 import random
 
@@ -13,6 +13,12 @@ def bartender_attack():
         if choice == 1:
             print("You attack the Bartender")
             bartender.attack()
+        if choice == 2:
+            if not magic:
+                print("You havent learned any magic yet")
+            else:
+                print(magic)
+
 
 
 

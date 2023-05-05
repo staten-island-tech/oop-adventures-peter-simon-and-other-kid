@@ -1,6 +1,6 @@
 from classes import *
 from actions import *
-from attack import *
+# from attack import *
 
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -174,7 +174,7 @@ def shop():
     if dialogue == 4:
         bartender_attack()
 
-shop()
+# shop()
 
 def impDialogue():
     print("IMP: Order on the Domino's app and earn points towards free pizza!")
@@ -200,22 +200,38 @@ def impDialogue():
         elif lunatic == 2:
             print('No one wins. No one loses. The fight ends.')
         elif lunatic == 3:
-            print("You scream some lines from those corny kids' movies and make a complete fool of yourself. The imp get away and you lose 1 HP.")
+            print("You scream some lines from those corny kids' movies and make a complete fool of yourself. The imp gets away and you lose 1 HP.")
             change_hp(hp,-1,hp_t)
         else:
             print('The imp stops running and pummels you with the pizza box. You lose 20 HP.')
             change_hp(hp,-20,hp_t)
+            return
 
 def trollDialogue():
     print("TROLL: U MAD BRO?")
-    dialogueChoice = int(input('1: Stare in confusion, 2: Pound his face in, 3: Recite the Bee Movie script'))
+    dialogueChoice = int(input('1: Stare in confusion, 2: Pound his face in, 3: Recite the Bee Movie script, 4: Megaman 8, 5: Do a backflip, Anything else: Run away'))
     if dialogueChoice == 1:
         print('TROLL: The FitnessGram pacer test is a multistage aerobic capacity test. It will...')
         print('Five hours later...')
         print('TROLL: On your mark. Get ready. Start.')
-    if dialogueChoice == 2:
+    elif dialogueChoice == 2:
         troll.attack()
-    if dialogueChoice == 3:
+    elif dialogueChoice == 3:
         print("According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible...")
         print('Ten hours later...')
-        print("")
+        print("We live on two cups a year. They put it in lip balm for no reason whatsoever...")
+        print('Five more hours later...')
+        print("Wrap it up, guys. I had virtually no rehearsal for that.")
+        print('Troll: OH MY GOD')
+        print('The troll escapes.')
+    elif dialogueChoice == 4:
+        print("mega man today we finnish this hay bass wy must i fight you wii are not enemys shut up aaaaauuuugh mega maaaaan roll mega man you must come with me you cant leave yet uh aaaaaaugh rush jet wooooooo bass we have to do thi s some ofer time aaauuuuugh run away cowerd yull pay for this insult ill be back")
+        print('The troll stares in disbelief.')
+    elif dialogueChoice == 5:
+        print("You trip over a pebble and break your neck. GAME OVER")
+        change_hp(hp,100,hp_t)
+    else:
+        print('RUN AWAY RUN AWAAAAYYYYYY')
+        return
+
+trollDialogue()

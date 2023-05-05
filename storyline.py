@@ -180,7 +180,7 @@ def impDialogue():
     print("IMP: Order on the Domino's app and earn points towards free pizza!")
     pizzaChoice = int(input("Order on the Domino's App? 1: Yes, 2: No, 3: Act stupid"))
     if pizzaChoice == 1:
-        eatPizza = int(input('The imp hands you his pizza. Eat some? 1: Yes, 2: No, 3: Shove it down his throat')) # If I had a nickel for every time I ate a whole pizza pie in this building, I'd have two (soon three) nickels.
+        eatPizza = int(input('The imp hands you his pizza. Eat some? 1: Yes, 2: No, 3: Shove it down his throat')) # If I had a nickel for every time I ate a whole pizza pie in this building, I'd have three nickels.
         if eatPizza == 1:
             print('There are expired boogers on it and you lose 50 HP.')
             change_hp(hp,-50,hp_t)
@@ -234,4 +234,4 @@ def trollDialogue():
         print('RUN AWAY RUN AWAAAAYYYYYY')
         return
 
-trollDialogue()
+

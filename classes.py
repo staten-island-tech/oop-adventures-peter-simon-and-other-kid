@@ -27,6 +27,14 @@ class monster:
         self.name = name
         self.level = level
     
+    def attacked(self):
+        random_p = int(power * (random.randint(80, 120)/100))
+        print(f"The {self.name} takes {random_p} damage")
+        self.hp -= random_p
+        if self.hp < 0:
+            self.hp = 0
+        print(f"The {self.name}'s new hp is {self.hp}")
+
     def attack(self):
         random_p = int(power * (random.randint(80, 120)/100))
         print(f"The {self.name} takes {random_p} damage")

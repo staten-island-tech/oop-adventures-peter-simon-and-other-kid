@@ -1,6 +1,5 @@
 from classes import *
 from actions import *
-# from attack import *
 
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -235,3 +234,45 @@ def trollDialogue():
         return
 
 
+def WolfDialogue():
+    print("WOLF: EAT MY CHILI")
+    dialogueChoice = int(input("1: Eat the chili, 2: Don't eat the chili, 3: Shove it in the wolf's face"))
+    if dialogueChoice == 1:
+        print("Your stomach explodes. Taco Bell move. You lose 99 HP.")
+        change_hp(hp,100,hp_t)
+    if dialogueChoice == 2:
+        print('Nothing happens and the wolf is disgruntled. FIGHT!!')
+        wolf.attack()
+    if dialogueChoice == 3:
+        print("You stuff the wolf's face with chili. It explodes in his face. Run away?")
+        runChoice = int(input("1: Run away, 2: Don't run away"))
+        if runChoice == 1:
+            print('RUN AWAY RUN AWAAAAYYYYYY')
+            return
+        if runChoice == 2:
+            print('FIGHT!!!')
+            wolf.attack()
+        else:
+            wolf.attack()
+    else:
+        print("You explode. Oops.")
+        change_hp(hp,-100,hp_t)
+        return
+    
+def BoneDialogue():
+    print("BONE: [unfunny skeleton-related quip here]")
+    boneDialogue = int(input('1: Do the Bull Charge, 2: Eat it, 3: Ask for forbidden knowledge, 4: Fight'))
+    if boneDialogue == 1:
+        print('You Bull Charge your nemesis to Hell and back and earn NOTHING! You LOSE! GOOD DAY SIR!')
+        return
+    if boneDialogue == 2:
+        print('You choke on the bone and die in five minutes.')
+    if boneDialogue == 3:
+        print('Where does he get his supply of laurels?') # In Castlevania II, there's this guy in the basement of Laruba Mansion who gives you free laurels. He never exhausts his supply. Where does he get it?
+        print('Before the bone responds, you are smitten by the ghost of Asa Griggs Candler. Game Over')
+    if boneDialogue == 4:
+        bone.fight()
+
+def LichDialogue():
+    print("LICH: Shall I pick your nose, good sir?")
+    noseChoice = int(input("1: Let him pick your nose, 2: Don't let him pick your nose, 3: Blast him with your Colazooka!"))

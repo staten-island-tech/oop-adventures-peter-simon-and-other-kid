@@ -50,7 +50,7 @@ def shop():
                     equipChoice = int(input('You now have Iron Sword. Equip sword? 1: Yes, 2: No'))
                     change_gold(-50)
                     if equipChoice == 1:
-                        equip(Iron)
+                        iron.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:
@@ -62,7 +62,7 @@ def shop():
                     equipChoice = int(input('You now have Silver Sword. Equip sword? 1: Yes, 2: No'))
                     change_gold(-100)
                     if equipChoice == 1:
-                        equip(Silver)
+                        silver.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     elif gold < 50:
@@ -74,7 +74,7 @@ def shop():
                     equipChoice = int(input('You now have Titanium Sword. Equip sword? 1: Yes, 2: No'))
                     change_gold(-200)
                     if equipChoice == 1:
-                        equip(Titanium)
+                        titanium.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:
@@ -86,7 +86,7 @@ def shop():
                     equipChoice = int(input('You now have Gold Sword. Equip sword? 1: Yes, 2: No'))
                     change_gold(-350)
                     if equipChoice == 1:
-                        equip(Gold)
+                        gold.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:
@@ -98,7 +98,7 @@ def shop():
                     equipChoice = int(input('You now have Diamond Sword. Equip sword? 1: Yes, 2: No'))
                     change_gold(-500)
                     if equipChoice == 1:
-                        equip(Diamond)
+                        diamond.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:
@@ -112,7 +112,7 @@ def shop():
                     equipChoice = int(input('You now have Leather Armor. Equip armor? 1: Yes, 2: No'))
                     change_gold(-100)
                     if equipChoice == 1:
-                        equip(Leather)
+                        leather.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 100:
@@ -122,7 +122,7 @@ def shop():
                     equipChoice = int(input('You now have Iron Armor. Equip armor? 1: Yes, 2: No'))
                     change_gold(-200)
                     if equipChoice == 1:
-                        equip(Iron)
+                        iron.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 200:
@@ -132,7 +132,7 @@ def shop():
                     equipChoice = int(input('You now have Silver Armor. Equip armor? 1: Yes, 2: No'))
                     change_gold(-300)
                     if equipChoice == 1:
-                        equip(Silver)
+                        silver.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 200:
@@ -142,7 +142,7 @@ def shop():
                     equipChoice = int(input('You now have Titanium Armor. Equip armor? 1: Yes, 2: No'))
                     change_gold(-400)
                     if equipChoice == 1:
-                        equip(Titanium)
+                        titanium.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 400:
@@ -152,7 +152,7 @@ def shop():
                     equipChoice = int(input('You now have Gold Armor. Equip armor? 1: Yes, 2: No'))
                     change_gold(-500)
                     if equipChoice == 1:
-                        equip(Gold)
+                        gold.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 500:
@@ -162,7 +162,7 @@ def shop():
                     equipChoice = int(input('You now have Diamond Armor. Equip armor? 1: Yes, 2: No'))
                     change_gold(-600)
                     if equipChoice == 1:
-                        equip(Diamond)
+                        diamond.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 600:

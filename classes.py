@@ -26,7 +26,7 @@ class monster:
         self.hit = hit
         self.name = name
         self.level = level
-    
+        self.stun = False
     def attacked(self):
         random_p = int(power * (random.randint(80, 120)/100))
         print(f"The {self.name} takes {random_p} damage")
@@ -43,8 +43,29 @@ class monster:
             self.hp = 0
         print(f"The {self.name}'s new hp is {self.hp}")
 
-    def dark(self,hit):
-        self.hit - hit
+    def magic(self,num):
+        if num == 1:
+            self.hp - (20 + random.randint(1,10))
+            print(f"The {self.name} takes {random_p} damage")
+        if num == 2:
+            self.hit -= 0.3
+            print("Darkness applied")
+        if num == 4:
+            if self.level < 5:
+                self.stun == True
+                print(f"{self.name} is stunned")
+            else:
+                print("Stun is ineffective")
+    
+    def check_stun(self):
+        if self.stun == True:
+            if(self.level > 4):
+                print(f"{self.name} is cured from stun!")
+                return False
+            else:
+                self.level += 1
+                return True
+
 
 class boss(monster):
     def __init__(self,hp,power,hit,level,name,magic):

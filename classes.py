@@ -45,7 +45,8 @@ class monster:
 
     def magic(self,num):
         if num == 1:
-            self.hp - (20 + random.randint(1,10))
+            random_p = self.hp - (20 + random.randint(1,10))
+            self.hp -= random_p
             print(f"The {self.name} takes {random_p} damage")
         if num == 2:
             self.hit -= 0.3
@@ -73,7 +74,7 @@ class boss(monster):
         super().__init__(hp,power,hit,level,name)
 
 
-    def nuke():
+    def nuke(self):
         nuke_damage = 50 + random.randint(0, 10)
         if test(self.magic):
             change_hp(nuke_damage)

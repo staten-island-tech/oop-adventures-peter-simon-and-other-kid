@@ -1,5 +1,6 @@
 from classes import *
 from storyline import *
+
 import random
 
 
@@ -51,11 +52,12 @@ def troll_attack():
                     magic_choice = int(input(("What magic would you like to use?")))
                 if magic_choice <= magic_num and magic_choice > 0:
                     if magic_choice == 3:
-                        heal = hp += (20 + random.randint(1,10))
+                        heal = (20 + random.randint(1,10))
+                        hp += heal
                         print(f"You gained {heal} hp")
                     else: 
                         troll.magic(magic_num)
                                                                                              
-        if(troll.hp > 0 and check_stun() == False):
+        if(troll.hp > 0 and troll.check_stun() == False):
             print("The Troll pulls out his pizza box and whacks you")
             troll.attack(hp)

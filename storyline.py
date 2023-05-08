@@ -1,5 +1,8 @@
 from classes import *
+from actions import *
+from attack import *
 
+magic_num = 0
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave'))
     if dialogue == 1:
@@ -48,7 +51,7 @@ def shop():
                 if gold >= 50:
                     equipChoice = int(input('You now have Iron Sword. Equip sword? 1: Yes, 2: No'))
                     if equipChoice == 1:
-                        equip(Iron)
+                        iron.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:
@@ -59,7 +62,7 @@ def shop():
                 if gold >= 100:
                     equipChoice = int(input('You now have Silver Sword. Equip sword? 1: Yes, 2: No'))
                     if equipChoice == 1:
-                        equip(Silver)
+                        silver.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     elif gold < 50:
@@ -70,7 +73,7 @@ def shop():
                 if gold >= 200:
                     equipChoice = int(input('You now have Titanium Sword. Equip sword? 1: Yes, 2: No'))
                     if equipChoice == 1:
-                        equip(Titanium)
+                        titanium.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:
@@ -81,7 +84,7 @@ def shop():
                 if gold >= 350:
                     equipChoice = int(input('You now have Gold Sword. Equip sword? 1: Yes, 2: No'))
                     if equipChoice == 1:
-                        equip(Gold)
+                        gold.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:
@@ -92,7 +95,7 @@ def shop():
                 if gold >= 500:
                     equipChoice = int(input('You now have Diamond Sword. Equip sword? 1: Yes, 2: No'))
                     if equipChoice == 1:
-                        equip(Diamond)
+                        diamond.equip()
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:

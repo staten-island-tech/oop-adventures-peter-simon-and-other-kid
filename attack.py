@@ -35,21 +35,27 @@ def troll_attack():
                 troll.attacked()
                 move = True
             if choice == 2:
-                if not magic:
+                if magic_num < 1:
                     print("You havent learned any magic yet")
                 else:
-                    print("What magic would you like to use?")
                     if magic_num > 0:
                         print("1. Fire",end=" ")
                     if magic_num > 1:
                         print("2. Dark",end=" ")
                     if magic_num > 2:
-                        print("3. Heal",end=" ")     
+                        print("3. Heal",end="")     
                     if magic_num > 3:
                         print("4. Stun",end=" ")     
                     if magic_num > 4:
-                        print("5. DOOM",end="")     
+                        print("5. DOOM",end="")    
+                    magic_choice = int(input(("What magic would you like to use?")))
+                if magic_choice <= magic_num and magic_choice > 0:
+                    if magic_choice == 3:
+                        heal = hp += (20 + random.randint(1,10))
+                        print(f"You gained {heal} hp")
+                    else: 
+                        troll.magic(magic_num)
                                                                                              
-        if(troll.hp > 0):
+        if(troll.hp > 0 and check_stun() == False):
             print("The Troll pulls out his pizza box and whacks you")
             troll.attack(hp)

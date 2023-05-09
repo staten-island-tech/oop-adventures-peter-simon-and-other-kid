@@ -1,5 +1,6 @@
 from classes import *
 from actions import *
+from attack import * # If we test it in main we can just import everything from each file so we don't have any problems.
 
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -265,14 +266,48 @@ def BoneDialogue():
     if boneDialogue == 1:
         print('You Bull Charge your nemesis to Hell and back and earn NOTHING! You LOSE! GOOD DAY SIR!')
         return
-    if boneDialogue == 2:
+    elif boneDialogue == 2:
         print('You choke on the bone and die in five minutes.')
-    if boneDialogue == 3:
-        print('Where does he get his supply of laurels?') # In Castlevania II, there's this guy in the basement of Laruba Mansion who gives you free laurels. He never exhausts his supply. Where does he get it?
+    elif boneDialogue == 3:
+        print('Where does he get his supply of laurels?') # In Castlevania II, there's this guy in Laruba Mansion's basement who gives you free laurels. He never exhausts his supply. Where does he get it?
         print('Before the bone responds, you are smitten by the ghost of Asa Griggs Candler. Game Over')
-    if boneDialogue == 4:
+    elif boneDialogue == 4:
         bone.fight()
 
 def LichDialogue():
     print("LICH: Shall I pick your nose, good sir?")
     noseChoice = int(input("1: Let him pick your nose, 2: Don't let him pick your nose, 3: Blast him with your Colazooka!"))
+    if noseChoice == 1:
+        print('The lich shoves the Colazooka up your nose and pulls the trigger. You are now a pile of Mentos. Game Over')
+    elif noseChoice == 2:
+        print('Nothing happens. You fight anyway.')
+    elif noseChoice == 3:
+        print('The lich snatches it from you before you can use it. He pulls the trigger and you explode. GAME OVER')
+    else:
+        print('The lich punches you into space for being a fencesitter. Game Over')
+
+def WizardDialogue():
+    print("WIZARD: uhuhuhuh... kids shows funny... uhhuhuhh...")
+    wizardChoice = int(input("1: Kick 'it' to him, 2: Ask for his age, 3: Pick your nose, 4: Ask for his weight"))
+    if wizardChoice == 1:
+        print('WIZARD picks his nose all the time. FIGHT!')
+    elif wizardChoice == 2:
+        print("me 31 years old lel") # prime number
+    elif wizardChoice == 3:
+        print("Before you can eat it, the wizard slaps your boogers out of your hand and challenges you to a duel. FIGHT!")
+    elif wizardChoice == 4:
+        print("The wizard tips over and crushes you with his immense weight. GAME OVER")
+    else:
+        print("The wizard picks his nose and has you eat it. Nothing happens.")
+
+def wormDialogue():
+    print("WORM: jfjiefjiwejwfjiweef")
+    wormChoice = int(input("1: 'The government is controlled by PepsiCo', 2: 'Christmas is in May,' 3: "))
+    
+
+
+shop()
+impDialogue()
+trollDialogue()
+WolfDialogue()
+BoneDialogue()

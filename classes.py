@@ -7,6 +7,14 @@ def test(prob):
     return random.randint(0,1) > prob
 
 
+typing_speed = 70 #wpm
+def output(t):
+    for l in t:
+        sys.stdout.write(l)
+        sys.stdout.flush()
+        time.sleep(random.random()*10.0/typing_speed)
+    print('')
+
 class weapon:
     def __init__(self,power,hit,name):
         self.power = power
@@ -29,39 +37,39 @@ class monster:
         self.stun = False
     def attacked(self):
         random_p = int(power * (random.randint(80, 120)/100))
-        print(f"The {self.name} takes {random_p} damage")
+        output(f"The {self.name} takes {random_p} damage")
         self.hp -= random_p
         if self.hp < 0:
             self.hp = 0
-        print(f"The {self.name}'s new hp is {self.hp}")
+        output(f"The {self.name}'s new hp is {self.hp}")
 
     def attack(self):
         random_p = int(power * (random.randint(80, 120)/100))
-        print(f"The {self.name} takes {random_p} damage")
+        output(f"The {self.name} takes {random_p} damage")
         self.hp -= random_p
         if self.hp < 0:
             self.hp = 0
-        print(f"The {self.name}'s new hp is {self.hp}")
+        output(f"The {self.name}'s new hp is {self.hp}")
 
     def magic(self,num):
         if num == 1:
             random_p = self.hp - (20 + random.randint(1,10))
             self.hp -= random_p
-            print(f"The {self.name} takes {random_p} damage")
+            output(f"The {self.name} takes {random_p} damage")
         if num == 2:
             self.hit -= 0.3
-            print("Darkness applied")
+            output("Darkness applied")
         if num == 4:
             if self.level < 5:
                 self.stun == True
-                print(f"{self.name} is stunned")
+                output(f"{self.name} is stunned")
             else:
-                print("Stun is ineffective")
+                output("Stun is ineffective")
     
     def check_stun(self):
         if self.stun == True:
             if(self.level > 4):
-                print(f"{self.name} is cured from stun!")
+                output(f"{self.name} is cured from stun!")
                 return False
             else:
                 self.level += 1
@@ -79,7 +87,7 @@ class boss(monster):
         if test(self.magic):
             change_hp(nuke_damage)
         else:
-            print("Nuke was ineffective")
+            output("Nuke was ineffective")
 
 class armor:
     def __init__(self,bonus,name):

@@ -1,6 +1,6 @@
 from classes import *
 from actions import *
-from attack import * # If we test it in main we can just import everything from each file so we don't have any problems.
+from attack import * # If we test it in main we can just import everything from each file so we don't have any problems. We have no reason to import everything from each individual file
 
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -229,7 +229,7 @@ def trollDialogue():
         print('The troll stares in disbelief.')
     elif dialogueChoice == 5:
         print("You trip over a pebble and break your neck. GAME OVER")
-        change_hp(hp,100,hp_t)
+        change_hp(hp,100,hp_t) 
     else:
         print('RUN AWAY RUN AWAAAAYYYYYY')
         return
@@ -269,7 +269,7 @@ def BoneDialogue():
     elif boneDialogue == 2:
         print('You choke on the bone and die in five minutes.')
     elif boneDialogue == 3:
-        print('Where does he get his supply of laurels?') # In Castlevania II, there's this guy in Laruba Mansion's basement who gives you free laurels. He never exhausts his supply. Where does he get it?
+        print('Where does he get his supply of laurels?') # In Castlevania II, some dude in Laruba Mansion gives you free laurels if you talk with him. He never exhausts his supply. Where does he get it?
         print('Before the bone responds, you are smitten by the ghost of Asa Griggs Candler. Game Over')
     elif boneDialogue == 4:
         bone.fight()
@@ -302,8 +302,28 @@ def WizardDialogue():
 
 def wormDialogue():
     print("WORM: jfjiefjiwejwfjiweef")
-    wormChoice = int(input("1: 'The government is controlled by PepsiCo', 2: 'Christmas is in May,' 3: "))
-    
+    wormChoice = int(input("1: 'The government is controlled by PepsiCo', 2: 'Christmas is in May,' 3: phhhhtphtphtphtphtphp"))
+    if wormChoice == 1:
+        print('WORM: FAKE!')
+    elif wormChoice == 2: # to infinity and beyond
+        print('WORM: You got that right.')
+    elif wormChoice == 3:
+        print('You spat on the worm. FIGHT!!')
+    else:
+        print("Please pick others' noses with a keyboard. DO IT!")
+
+def medusaDialogue():
+    print("MEDUSA: oh baby baby baby OOOOOHHH oh baby baby baby NOOOOOOOO")    
+    medusaChoice = int(input("1: Stay and listen, 2: Fling boogers at her, 3: Sing an equally bad song"))
+    if medusaChoice == 1:
+        print("You turn to stone and die. GAME OVER")
+    elif medusaChoice == 2:
+        print("She stops and flings them back in your mouth. FIGHT!")
+    elif medusaChoice == 3:
+        print("Rebecca Black deserves a Colazooka up the hiney")
+    else:
+        print("You turn to stone for three seconds, causing your boogers to fall off and bounce in Medusa's mouth.")
+
 
 
 shop()

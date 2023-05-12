@@ -322,9 +322,24 @@ def medusaDialogue():
     elif medusaChoice == 3:
         print("Rebecca Black deserves a Colazooka up the hiney")
     else:
-        print("You turn to stone for three seconds, causing your boogers to fall off and bounce in Medusa's mouth.")
+        print("You turn to stone for three seconds, causing your boogers to fall off and bounce to Medusa's mouth.")
 
+def karyDialogue():
+    print("KARY: I have been picking my nose for the past five hours")
+    karyChoice = int(input("1: Pick its nose, 2: Punch it in the face, 3: Start a conspiracy theory, 4: Act stupid"))
+    if karyChoice == 1:
+        print("Your fingers explode and become cans of Coke. GAME OVER")
+    elif karyChoice == 2:
+        print("OGRE FIGHT!!")
+    elif karyChoice == 3: 
+        print("Santa Claus is a hoax created by the government to get kids to punch people in the face.")
+    elif karyChoice == 4:
+        print("creating terror and government purges acting out all of your monstrous urges big brother plots that would make orwell blush these are the things that sure give me a rush spying on lenin and murdering trotsky vexing the west with his communist plotsky turning your dreams into scary nightmares that is the way i forget all my cares when the germans invade moscow and the weather's vile i simply look on as they all freeze to death and that really makes me smile feasting like ivan while serfs live in rations conquering dozens of satellite nations starting my own personality cult doing away with those who might revolt sending your critics to rot in siberia thats how you get populations to fear ya building a wall down the streets of berlin this kind of thing makes me flash quite a grin if the people call for freedom or democracy i simply bup off everybody until theres nobody left but me")
+    else:
+        print("You get punched in the face. WOOHOO")
 
+def krakenDialogue():
+    print("KRAKEN: ")
 
 shop()
 impDialogue()

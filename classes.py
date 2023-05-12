@@ -1,13 +1,13 @@
 import random
 from actions import *
-
-
+import sys
+import time
 magic = {}
 def test(prob):
     return random.randint(0,1) > prob
 
 
-typing_speed = 70 #wpm
+typing_speed = 150 #wpm
 def output(t):
     for l in t:
         sys.stdout.write(l)
@@ -15,6 +15,8 @@ def output(t):
         time.sleep(random.random()*10.0/typing_speed)
     print('')
 
+def die():
+    print("Game Over!")
 class weapon:
     def __init__(self,power,hit,name):
         self.power = power
@@ -35,6 +37,7 @@ class monster:
         self.name = name
         self.level = level
         self.stun = False
+        self.weapon = weapon
     def attacked(self):
         random_p = int(power * (random.randint(80, 120)/100))
         output(f"The {self.name} takes {random_p} damage")
@@ -44,12 +47,61 @@ class monster:
         output(f"The {self.name}'s new hp is {self.hp}")
 
     def attack(self):
-        random_p = int(power * (random.randint(80, 120)/100))
-        output(f"The {self.name} takes {random_p} damage")
-        self.hp -= random_p
-        if self.hp < 0:
-            self.hp = 0
-        output(f"The {self.name}'s new hp is {self.hp}")
+        global hp
+        random_p = int(self.power * (random.randint(80, 120)/100))
+        if random.random() < self.hit:
+            output(f"You take {random_p} damage")
+            hp -= random_p
+            if hp < 0:
+                die()
+        else:
+            print(f"The {self.name} missed!")
+    
+    def fight(self):
+        global hp
+        global magic_num
+        magic_num = 5
+        while hp > 0 and self.hp > 0:
+            output(f"Your HP: {hp}")
+            output(f"{self.name}'s HP: {self.hp}")
+            move = False
+            while move == False:
+                choice = int(input("1. Attack 2. Magic"))
+                if choice == 1:
+                    output(f"You attack the {self.name}")
+                    self.attacked()
+                    move = True
+                if choice == 2:
+                    if magic_num < 1:
+                        output("You havent learned any magic yet")
+                    else:
+                        if magic_num > 0:
+                            print("1.Fire",end=" ")
+                        if magic_num > 1:
+                            print("2.Dark",end=" ")
+                        if magic_num > 2:
+                            print("3.Heal",end=" ")     
+                        if magic_num > 3:
+                            print("4.Stun",end=" ")     
+                        if magic_num > 4:
+                            print("5.DOOM",end="")    
+                        print()
+                        magic_choice = int(input(("What magic would you like to use?")))
+                        if magic_choice <= magic_num and magic_choice > 0:
+                            move = True
+                            if magic_choice == 3:
+                                heal = (20 + random.randint(1,10))
+                                hp += heal
+                                output(f"You gained {heal} hp")
+                                output(f"Your new hp is {hp}")
+                            else: 
+                                self.magic(magic_choice)
+                        else: 
+                            print("Please enter a valid magic number")
+                                                                                                
+            if(self.hp > 0 and self.check_stun() == False):
+                output(f"The {self.name} {self.weapon}")
+                self.attack()
 
     def magic(self,num):
         if num == 1:
@@ -74,6 +126,8 @@ class monster:
             else:
                 self.level += 1
                 return True
+        else:
+            return False
 
 
 class boss(monster):
@@ -99,16 +153,16 @@ class armor:
 
 # Declare monsters
 bartender = monster(50,10,0.5,1,"Bartender","blasts you with his colazuka")
-troll = monster(50,15,0.7,1,"troll","pulls out his pizza box and whacks you")
-wolf = monster(80,25,0.6,2,"wolf", "lunges and bites you")
+troll = monster(50,15,0.7,1,"Troll","pulls out his pizza box and whacks you")
+wolf = monster(80,25,0.6,2,"Wolf", "lunges and bites you")
 bone = monster(120,30,0.8,2,"bone", "punches you")
-lich = monster(150,50,0.8,3,"lich", "yells bad jokes at you until your brain starts hurting")
-wizard = monster(150,44,0.9,3,"wizard", "blasts a fireball at you")
-worm = monster(200,30,0.9,3,"worm", "trips over a cheerio and launches it at you")
-medusa = monster(200,35,0.9,3,"medusa", "gazes into your soul")
-kary = monster(300,50,0.85,4,"kary", "covers you in oil and lights you on fire")
-kraken = monster(400,60,0.8,4,"kraken", "squeezes you with his tenticle")
-tiamat = monster(420,40,0.95,4,"tiamat", "spawns as lightning cloud above you and it shoots lightning on your head")
+lich = monster(150,50,0.8,3,"Lich", "yells bad jokes at you until your brain starts hurting")
+wizard = monster(150,44,0.9,3,"Wizard", "blasts a fireball at you")
+worm = monster(200,30,0.9,3,"Worm", "trips over a cheerio and launches it at you")
+medusa = monster(200,35,0.9,3,"Medusa", "gazes into your soul")
+kary = monster(300,50,0.85,4,"Kary", "covers you in oil and lights you on fire")
+kraken = monster(400,60,0.8,4,"Kraken", "squeezes you with his tenticle")
+tiamat = monster(420,40,0.95,4,"Tiamat", "spawns as lightning cloud above you and it shoots lightning on your head")
 chaos = boss(600,80,0.9,5,"CHAOS","throws a nuke at you")
 
 # Declare weapons
@@ -126,3 +180,5 @@ silver = armor(40,"Silver Armor")
 titanium = armor(75, "Titanium Armor")
 gold = armor(100, "Gold Armor")
 diamond = armor(150, "Diamond") 
+
+bartender.fight()

@@ -52,3 +52,5 @@ def fight(self):
         if(self.hp > 0 and self.check_stun() == False):
             output(f"The {self.name}{self.weapon}")
             self.attack(hp)
+
+troll.fight()

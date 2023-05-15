@@ -45,6 +45,8 @@ def fight(self):
                     if magic_choice == 3:
                         heal = (20 + random.randint(1,10))
                         hp += heal
+                        if hp > hp_t:
+                            hp = hp_t
                         output(f"You gained {heal} hp")
                     else: 
                         self.magic(magic_num)

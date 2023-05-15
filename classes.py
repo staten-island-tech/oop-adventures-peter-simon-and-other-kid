@@ -60,7 +60,6 @@ class monster:
     def fight(self):
         global hp
         global magic_num
-        magic_num = 5
         while hp > 0 and self.hp > 0:
             output(f"Your HP: {hp}")
             output(f"{self.name}'s HP: {self.hp}")
@@ -92,20 +91,24 @@ class monster:
                             if magic_choice == 3:
                                 heal = (20 + random.randint(1,10))
                                 hp += heal
+                                if hp > hp_t:
+                                    hp = hp_t
                                 output(f"You gained {heal} hp")
                                 output(f"Your new hp is {hp}")
                             else: 
                                 self.magic(magic_choice)
                         else: 
                             print("Please enter a valid magic number")
-                                                                                                
-            if(self.hp > 0 and self.check_stun() == False):
-                output(f"The {self.name} {self.weapon}")
-                self.attack()
+            if(self.hp > 0):
+                if(self.check_stun() == False):
 
+                    output(f"The {self.name} {self.weapon}")
+                    self.attack()
+                else:
+                    print(f"The {self.name} is stunned!")
     def magic(self,num):
         if num == 1:
-            random_p = self.hp - (20 + random.randint(1,10))
+            random_p =20 + random.randint(1,10)
             self.hp -= random_p
             output(f"The {self.name} takes {random_p} damage")
         if num == 2:
@@ -113,15 +116,20 @@ class monster:
             output("Darkness applied")
         if num == 4:
             if self.level < 5:
-                self.stun == True
-                output(f"{self.name} is stunned")
+                self.stun = True
             else:
                 output("Stun is ineffective")
-    
+        if num == 5:
+            random_p = 100 + random.randint(1,100)
+            self.hp -= random_p
+            output(f"The {self.name} takes {random_p} damage")
+
     def check_stun(self):
         if self.stun == True:
             if(self.level > 4):
                 output(f"{self.name} is cured from stun!")
+                self.stun = False
+                self.level = 6
                 return False
             else:
                 self.level += 1

@@ -339,7 +339,37 @@ def karyDialogue():
         print("You get punched in the face. WOOHOO")
 
 def krakenDialogue():
-    print("KRAKEN: ")
+    print("KRAKEN: i am dead") # do not try this at home
+    krakenChoice = int(input("1: No you're not, 2: you are right, 3: i punched a tv in the face and got a heart attack"))
+    if krakenChoice == 1:
+        print("KRAKEN: PROVE IT")
+        existChoice = int(input("1: the dead cannot speak"))
+        if existChoice == 1:
+            print("KRAKEN: ghosts speak and are dead, are you stupid?")
+            ghostChoice = int(input("1: wow you're right, 2: ghosts are fake, 3: i punched a nanny in the face next five afternoons"))
+            if ghostChoice == 1:
+                print("KRAKEN: HAAHAAHAHHAHAHAHHA I WAS RIGHT I AM DEAD YOU SUCK EUDIUGIDGYGUYDGDUYG")
+                suckChoice = int(input("Punch him in the face? 1: Yes, Anything else: No"))
+                if suckChoice == 1:
+                    print("FIGHT")
+                else:
+                    print("Your brain explodes. Kraken is right. GAME OVER") # congarlutations this story is happy end thank you you feel strongth welling in your body return to starting point challenge again
+            if ghostChoice == 2:
+                print("KRAKEN: uhhhh... zombies speak and they're dead. checkmate")
+                zombieChoice = int(input("1: wow you're right, 2: zombies are undead. thats completely different, 3: i want pizza"))
+                if zombieChoice == 1:
+                    print("KRAKEN: i win")
+                    print("You explode because Kraken is right. GAME OVER")
+                if zombieChoice == 2:
+                    print("KRAKEN: but theyre real")
+                    realChoice = int(input("1: no they aren't"))
+                    if realChoice == 1:
+                        print("KRAKEN: whatever I'm still dead")
+                        deadChoice = int(input("1: how are you speaking then"))
+                        if deadChoice == 1:
+                            print("Kraken is mad. FIGHT!")
+                        else:
+                            print("lol game over")
 
 shop()
 impDialogue()

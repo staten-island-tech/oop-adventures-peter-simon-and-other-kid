@@ -326,7 +326,7 @@ def medusaDialogue():
 
 def karyDialogue():
     print("KARY: I have been picking my nose for the past five hours")
-    karyChoice = int(input("1: Pick its nose, 2: Punch it in the face, 3: Start a conspiracy theory, 4: Act stupid"))
+    karyChoice = int(input("1: Pick its nose, 2: Punch it in the face, 3: Start a conspiracy theory, 4: Say something stupid"))
     if karyChoice == 1:
         print("Your fingers explode and become cans of Coke. GAME OVER")
     elif karyChoice == 2:
@@ -348,19 +348,19 @@ def krakenDialogue():
             print("KRAKEN: ghosts speak and are dead, are you stupid?")
             ghostChoice = int(input("1: wow you're right, 2: ghosts are fake, 3: i punched a nanny in the face next five afternoons"))
             if ghostChoice == 1:
-                print("KRAKEN: HAAHAAHAHHAHAHAHHA I WAS RIGHT I AM DEAD YOU SUCK EUDIUGIDGYGUYDGDUYG")
+                print("KRAKEN: about you? sure, why not")
                 suckChoice = int(input("Punch him in the face? 1: Yes, Anything else: No"))
                 if suckChoice == 1:
                     print("FIGHT")
                 else:
                     print("Your brain explodes. Kraken is right. GAME OVER") # congarlutations this story is happy end thank you you feel strongth welling in your body return to starting point challenge again
-            if ghostChoice == 2:
+            elif ghostChoice == 2:
                 print("KRAKEN: uhhhh... zombies speak and they're dead. checkmate")
                 zombieChoice = int(input("1: wow you're right, 2: zombies are undead. thats completely different, 3: i want pizza"))
                 if zombieChoice == 1:
                     print("KRAKEN: i win")
                     print("You explode because Kraken is right. GAME OVER")
-                if zombieChoice == 2:
+                elif zombieChoice == 2:
                     print("KRAKEN: but theyre real")
                     realChoice = int(input("1: no they aren't"))
                     if realChoice == 1:
@@ -370,9 +370,34 @@ def krakenDialogue():
                             print("Kraken is mad. FIGHT!")
                         else:
                             print("lol game over")
-
-shop()
-impDialogue()
-trollDialogue()
-WolfDialogue()
-BoneDialogue()
+                elif zombieChoice == 3:
+                    print("KRAKEN: come and get some!!!")
+                    print("FIGHT!!")
+            elif ghostChoice == 3:
+                print("KRAKEN: what was that last part?")
+                nannyChoice = int(input("1: next five afternoons, why?"))
+                if nannyChoice == 1:
+                    print("KRAKEN: are you on drugs???")
+                    substanceChoice = int(input("1: caffeine, thank you very much"))
+                    if substanceChoice == 1:
+                        print("KRAKEN: you like coffee?")
+                        coffeeChoice = int(input("1: yes, 2: no"))
+                        if coffeeChoice == 1:
+                            print("KRAKEN: huh me too... lets fight")
+                        elif coffeeChoice == 2:
+                            print("KRAKEN: bad for you... lets fight")
+                        else:
+                            print("Fencesitting is for losers. GAME OVER") 
+                    else:
+                        print("game over lel")
+                else:
+                    print("Kraken-san punches you in the face. GAME OVER")
+            else:
+                print("You turn into a ghost. GAME OVER")
+        else:
+            print("You no longer exist. GAME OVER")
+    elif krakenChoice == 2:
+        print("KRAKEN: ya like jazz")
+        BeeMovieChoice = int(input("1: yes"))
+        if BeeMovieChoice == 1:
+            print()

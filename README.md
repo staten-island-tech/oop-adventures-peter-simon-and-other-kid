@@ -2,4 +2,4 @@
 
 # Welcome to our program
 
-It is a text adventure game we made entirly through python
+It is a text adventure game we made entirly through python. To play our game, simply respond to the questions with a number corresponding to a choice and hit enter to lock it in.

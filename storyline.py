@@ -1,6 +1,7 @@
 from classes import *
 from actions import *
 from attack import * # If we test it in main we can just import everything from each file so we don't have any problems. We have no reason to import everything from each individual file
+from beemovie import *
 
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -400,4 +401,18 @@ def krakenDialogue():
         print("KRAKEN: ya like jazz")
         BeeMovieChoice = int(input("1: yes"))
         if BeeMovieChoice == 1:
-            print()
+            print("bee movie") # placeholder for the entire script
+            print("FIGHT")
+    elif krakenChoice == 3:
+        print("KRAKEN: when are ya getting married?")
+        marriageChoice = int(input("1: to whom? 2: NEVER!!!"))
+        if marriageChoice == 1:
+            print("KRAKEN: the tv, genius")
+            tvChoice = int(input("1: no I'm a phone man!!! 2: of course"))
+            if tvChoice == 1:
+                print("KRAKEN: thats stupid. lets fight")
+            elif tvChoice == 2:
+                print("KRAKEN: alright. lets dance")
+        elif marriageChoice == 2:
+            print("KRAKEN: bad for you. lets fight")
+    

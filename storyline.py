@@ -238,7 +238,7 @@ def WolfDialogue():
     dialogueChoice = int(input("1: Eat the chili, 2: Don't eat the chili, 3: Shove it in the wolf's face"))
     if dialogueChoice == 1:
         print("Your stomach explodes. Taco Bell move. You lose 99 HP.")
-        change_hp(hp,100,hp_t)
+        change_hp(hp,99,hp_t)
     if dialogueChoice == 2:
         print('Nothing happens and the wolf is disgruntled. FIGHT!!')
         wolf.attack()

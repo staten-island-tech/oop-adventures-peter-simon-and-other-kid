@@ -1,7 +1,7 @@
-from classes import *
-from actions import *
-from attack import * # If we test it in main we can just import everything from each file so we don't have any problems. We have no reason to import everything from each individual file
-from beemovie import *
+# from classes import *
+# from actions import *
+# from attack import * # If we test it in main we can just import everything from each file so we don't have any problems. We have no reason to import everything from each individual file
+# from beemovie import *
 
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -23,19 +23,17 @@ def shop():
         if mentosChoice == 1:
             print('The soda (along with the can) explodes in your face and amuses the shopkeeper. Oops.')
             if drink_choice == 1:
-                change_hp(hp,-10,hp_t)
+                print("You lose 10 HP.")
             if drink_choice == 2:
-                change_hp(hp,-45,hp_t)
+                print("You lose 45 HP.")
             if drink_choice == 3:
-                change_hp(hp,-20,hp_t)
+                print("You lose 20 HP.")
         elif mentosChoice == 2:
             print('You drink your soda. Best drink ever.')
             if drink_choice == 1:
                 print('You gain 20 HP. Coke is VERY good.')
-                change_hp(hp,20,hp_t)
             if drink_choice == 2:
                 print('You gain like 1 HP.')
-                change_hp(hp,1,hp_t)
             if drink_choice == 3:
                 print('You gain 10 HP. Pretty good.')
                 change_hp(hp,10,hp_t)
@@ -357,7 +355,7 @@ def krakenDialogue():
                     print("Your brain explodes. Kraken is right. GAME OVER") # congarlutations this story is happy end thank you you feel strongth welling in your body return to starting point challenge again
             elif ghostChoice == 2:
                 print("KRAKEN: uhhhh... zombies speak and they're dead. checkmate")
-                zombieChoice = int(input("1: wow you're right, 2: zombies are undead. thats completely different, 3: i want pizza"))
+                zombieChoice = int(input("1: wow you're right, 2: they're undead. thats completely different, 3: i want pizza"))
                 if zombieChoice == 1:
                     print("KRAKEN: i win")
                     print("You explode because Kraken is right. GAME OVER")
@@ -374,6 +372,8 @@ def krakenDialogue():
                 elif zombieChoice == 3:
                     print("KRAKEN: come and get some!!!")
                     print("FIGHT!!")
+                else:
+                    print("game over lol")
             elif ghostChoice == 3:
                 print("KRAKEN: what was that last part?")
                 nannyChoice = int(input("1: next five afternoons, why?"))
@@ -415,4 +415,18 @@ def krakenDialogue():
                 print("KRAKEN: alright. lets dance")
         elif marriageChoice == 2:
             print("KRAKEN: bad for you. lets fight")
-    
+
+def tiamatDialogue():
+    print("TIAMAT: what is love?")
+    loveChoice = int(input("1: baby don't hurt me, 2: i'm not your english teacher. look it up"))
+    if loveChoice == 1:
+        print("TIAMAT: no more...")
+        nomoreChoice = int(input("1: What is love? 2: Pulverize him, 3: Stop speaking"))
+        if nomoreChoice == 1:
+            print("TIAMAT: you ain't never gettin' it")
+            print("FIGHT!")
+        elif nomoreChoice == 2:
+            print("you asked for it. FIGHT!!")
+        elif nomoreChoice == 3:
+            print("...")
+            print("KRAKEN: speak")

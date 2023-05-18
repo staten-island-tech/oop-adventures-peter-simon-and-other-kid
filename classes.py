@@ -189,4 +189,3 @@ titanium = armor(75, "Titanium Armor")
 gold = armor(100, "Gold Armor")
 diamond = armor(150, "Diamond") 
 
-worm.fight()

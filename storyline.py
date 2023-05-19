@@ -4,9 +4,9 @@
 # from beemovie import *
 
 def shop():
-    dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
+    dialogue = int(input('BARTENDER: Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
     if dialogue == 1:
-        print("SHOPKEEPER: It's like, bad for you and stuff.")
+        print("BARTENDER: It's like, bad for you and stuff.")
         drink_choice = int(input("1: Get Coke, 2: Get Pepsi, 3: Get Dr. Pepper"))
         while drink_choice > 3:
             print('No fencesitting! DRINK!')
@@ -19,7 +19,7 @@ def shop():
             print('You have Pepsi. DRINK!')
         if drink_choice == 3:
             print('You have Dr. Pepper. DRINK!')
-        mentosChoice = int(input('SHOPKEEP: Would you like Mentos? 1: Yes, 2: No'))
+        mentosChoice = int(input('BARTENDER: Would you like Mentos? 1: Yes, 2: No'))
         if mentosChoice == 1:
             print('The soda (along with the can) explodes in your face and amuses the shopkeeper. Oops.')
             if drink_choice == 1:
@@ -40,8 +40,8 @@ def shop():
         else:
             print('Stop fencesitting.')
     if dialogue == 2:
-        print('SHOPKEEP: Would you like weapons or armor? 1: Get weapons, 2: Get armor')
-        goodsChoice = int(input('SHOPKEEP: What are you waiting for? 1: Get weapons, 2: Get armor'))
+        print('BARTENDER: Would you like weapons or armor? 1: Get weapons, 2: Get armor')
+        goodsChoice = int(input('BARTENDER: What are you waiting for? 1: Get weapons, 2: Get armor'))
         if goodsChoice == 1:
             print('We have swords.')
             weaponChoice = int(input('1: Iron Sword, cost 50 coins. 2: Silver Sword, cost 100 coins. 3: Titanium Sword, cost 200 coins. 4: Gold Sword, cost 350 coins. 5: Diamond Sword, cost 500 coins.'))
@@ -56,7 +56,7 @@ def shop():
                     else:
                         print('Do something.')                    
                 elif gold < 50: 
-                        print('SHOPKEEPER: Get a job. Denied!')
+                        print('BARTENDER: Get a job. Denied!')
             if weaponChoice == 2:
                 if gold >= 100:
                     equipChoice = int(input('You now have Silver Sword. Equip sword? 1: Yes, 2: No'))
@@ -66,9 +66,9 @@ def shop():
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     elif gold < 50:
-                        print("SHOPKEEPER: Make yourself rich so I don't have to.")
+                        print("BARTENDER: Make yourself rich so I don't have to.")
                     else:
-                        print("SHOPKEEPER: Do something.")
+                        print("BARTENDER: Do something.")
             if weaponChoice == 3:
                 if gold >= 200:
                     equipChoice = int(input('You now have Titanium Sword. Equip sword? 1: Yes, 2: No'))
@@ -80,7 +80,7 @@ def shop():
                     else:
                         print('Do something.') 
                 elif gold < 200:
-                    print("SHOPKEEPER: Why are you poor?")
+                    print("BARTENDER: Why are you poor?")
             if weaponChoice == 4:
                 if gold >= 350:
                     equipChoice = int(input('You now have Gold Sword. Equip sword? 1: Yes, 2: No'))
@@ -92,7 +92,7 @@ def shop():
                     else:
                         print('Do something.') 
                 elif gold < 350:
-                    print("SHOPKEEPER: My wife can do better.")
+                    print("BARTENDER: My wife pays me better.")
             if weaponChoice == 5:
                 if gold >= 500:
                     equipChoice = int(input('You now have Diamond Sword. Equip sword? 1: Yes, 2: No'))
@@ -104,9 +104,9 @@ def shop():
                     else:
                         print('Do something.') 
                 elif gold < 500:
-                    print("SHOPKEEPER: Your body pillow is sad now.")
+                    print("BARTENDER: Your body pillow is sad now.")
         if goodsChoice == 2:
-            armor_choice = input(int("SHOPKEEPER: Are you going commando? 1: Buy leather armor, 2: Buy iron armor, 3: Buy silver armor, 4: Buy titanium armor, 5: Buy gold armor, 6: Buy diamond armor"))
+            armor_choice = input(int("BARTENDER: Are you going commando? 1: Buy leather armor, 2: Buy iron armor, 3: Buy silver armor, 4: Buy titanium armor, 5: Buy gold armor, 6: Buy diamond armor"))
             if armor_choice == 1:
                 if gold >= 100:
                     equipChoice = int(input('You now have Leather Armor. Equip armor? 1: Yes, 2: No'))
@@ -116,7 +116,7 @@ def shop():
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 100:
-                    print('SHOPKEEPER: Typical.')
+                    print('BARTENDER: Typical.')
             if armor_choice == 2:
                 if gold >= 200:
                     equipChoice = int(input('You now have Iron Armor. Equip armor? 1: Yes, 2: No'))
@@ -126,7 +126,7 @@ def shop():
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 200:
-                    print('SHOPKEEPER: Stop being poor.')
+                    print('BARTENDER: Stop being poor.')
             if armor_choice == 3:
                 if gold >= 300:
                     equipChoice = int(input('You now have Silver Armor. Equip armor? 1: Yes, 2: No'))
@@ -136,7 +136,7 @@ def shop():
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 200:
-                    print('SHOPKEEPER: Buy a silver spoon and come back.')
+                    print('BARTENDER: Buy a silver spoon and come back.')
             if armor_choice == 4:
                 if gold >= 400:
                     equipChoice = int(input('You now have Titanium Armor. Equip armor? 1: Yes, 2: No'))
@@ -146,7 +146,7 @@ def shop():
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 400:
-                    print("SHOPKEEPER: Don't wet yourself.")
+                    print("BARTENDER: Don't wet yourself.")
             if armor_choice == 5:
                 if gold >= 500:
                     equipChoice = int(input('You now have Gold Armor. Equip armor? 1: Yes, 2: No'))
@@ -156,7 +156,7 @@ def shop():
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 500:
-                    print("SHOPKEEPER: Try pyrite. It's much better for you.")
+                    print("BARTENDER: Try pyrite. It fits you much better.")
             if armor_choice == 6:
                 if gold >= 600:
                     equipChoice = int(input('You now have Diamond Armor. Equip armor? 1: Yes, 2: No'))
@@ -166,9 +166,9 @@ def shop():
                     elif equipChoice == 2:
                         print('Nothing happens.')
                 elif gold < 600:
-                    print("SHOPKEEPER: Shove diamonds down the toilet and see what happens.")
+                    print("BARTENDER: Shove diamonds down the toilet and see what happens.")
     if dialogue == 3:
-        print('SHOPKEEPER: Change your diaper on the way out.')
+        print('BARTENDER: Change your diaper on the way out.')
         return
     if dialogue == 4:
         bartender_attack()
@@ -277,7 +277,7 @@ def LichDialogue():
     print("LICH: Shall I pick your nose, good sir?")
     noseChoice = int(input("1: Let him pick your nose, 2: Don't let him pick your nose, 3: Blast him with your Colazooka!"))
     if noseChoice == 1:
-        print('The lich shoves the Colazooka up your nose and pulls the trigger. You are now a pile of Mentos. Game Over')
+        print('The lich shoves a Colazooka up your nose and pulls the trigger. You are now a pile of Mentos. Game Over')
     elif noseChoice == 2:
         print('Nothing happens. You fight anyway.')
     elif noseChoice == 3:
@@ -429,4 +429,24 @@ def tiamatDialogue():
             print("you asked for it. FIGHT!!")
         elif nomoreChoice == 3:
             print("...")
-            print("KRAKEN: speak")
+            print("TIAMAT: speak")
+            speakChoice = int(input("1: Don't speak, 2: Pick your nose"))
+            if speakChoice == 1:
+                print("TIAMAT: lets fight. call uncle")
+            elif speakChoice == 2:
+                print("TIAMAT: EW what the hell?!!?! use a tissue!!!!11111!!1!one!1111!")
+                snotChoice = int(input("1: Eat it, 2: Wipe it on TIAMAT, 3: Wipe it on your underwear"))
+                if snotChoice == 1:
+                    print("TIAMAT: THATS DISGUSTING WTF?! YOU SHALL DIE!!!!!!!!!!!!!!!!!!!!!1111111111111one")
+                elif snotChoice == 2:
+                    print("TIAMAT: STOP WHAT THE HELL?! GROSS IT HURTS LIKE HELL RUN AWAY RUN AWAYYYYYY")
+                elif snotChoice == 3:
+                    print("TIAMAT: EWWW WHAT THE HELL THATS DISGUSTING!!! DONT NEVER DO THAT AGAIN!!! EVER!!!!!!")
+                print("FIGHT!!")
+    if loveChoice == 2:
+        print("TIAMAT: shut up")
+        shutupChoice = int(input("1: takes one to know one"))
+        if shutupChoice == 1:
+            print("TIAMAT: speak for yourself mr. or mrs. brain damage.")
+
+tiamatDialogue()

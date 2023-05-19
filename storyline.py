@@ -277,8 +277,3 @@ def LichDialogue():
     noseChoice = int(input("1: Let him pick your nose, 2: Don't let him pick your nose, 3: Blast him with your Colazooka!"))
 
 
-shop()
-impDialogue()
-trollDialogue()
-WolfDialogue()
-BoneDialogue()

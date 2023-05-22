@@ -457,5 +457,11 @@ def chaosDialogue():
     barryChoice = int(input("1: Yes, 2: No"))
     if barryChoice == 1:
         beelaw1 = str(input('CHAOS: whats bee law number 1?'))
-        if beelaw1 == "Absolutely no talking to humans":
-            print("CHAOS: man you're good")
+        beelaw1.lower()
+        if beelaw1 == "absolutely no talking to humans":
+            print("CHAOS: man you're good.")
+        else:
+            print("CHAOS: THINK BEE! THINK BEE! YOU SHALL DIE")
+
+
+chaosDialogue()

@@ -344,7 +344,7 @@
 # I'm just saying all life has value. You don't know what he's capable of feeling.
 # My brochure!
 # There you go, little guy.
-# I'm not scared of him.It's an allergic thing.
+# I'm not scared of him. It's an allergic thing.
 #  Put that on your resume brochure.
 # My whole face could puff up.
 # Make it one of your special skills.

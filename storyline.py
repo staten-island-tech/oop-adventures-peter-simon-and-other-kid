@@ -3,6 +3,9 @@
 # from attack import * # If we test it in main we can just import everything from each file so we don't have any problems. We have no reason to import everything from each individual file
 # from beemovie import *
 
+def BarryBBenson():
+    open
+
 def shop():
     dialogue = int(input('BARTENDER: Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
     if dialogue == 1:
@@ -261,7 +264,7 @@ def WolfDialogue():
     
 def BoneDialogue():
     print("BONE: [unfunny skeleton-related quip here]")
-    boneDialogue = int(input('1: Do the Bull Charge, 2: Eat it, 3: Ask for forbidden knowledge, 4: Fight'))
+    boneDialogue = int(input('1: Do the Bull Charge (Mike Tysons Punch Out), 2: Eat it, 3: Ask for forbidden knowledge, 4: Fight'))
     if boneDialogue == 1:
         print('You Bull Charge your nemesis to Hell and back and earn NOTHING! You LOSE! GOOD DAY SIR!')
         return
@@ -449,4 +452,10 @@ def tiamatDialogue():
         if shutupChoice == 1:
             print("TIAMAT: speak for yourself mr. or mrs. brain damage.")
 
-tiamatDialogue()
+def chaosDialogue():
+    print("CHAOS: are you Barry B Benson?")
+    barryChoice = int(input("1: Yes, 2: No"))
+    if barryChoice == 1:
+        beelaw1 = str(input('CHAOS: whats bee law number 1?'))
+        if beelaw1 == "Absolutely no talking to humans":
+            print("CHAOS: man you're good")

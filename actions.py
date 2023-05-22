@@ -8,7 +8,7 @@ hit = 0.7
 power = 30
 item = "Wooden Sword"
 armor = "none"
-magic_num = 5
+magic_num = 0
 
 def change_hp(hp,HP,hp_t):
     output(hp)

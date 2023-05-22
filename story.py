@@ -1,6 +1,6 @@
 from classes import *
 from actions import *
-
+import time
 def intro():
     output("Once Upon a Time....")
     time.sleep(1)
@@ -36,10 +36,25 @@ def intro():
     output("TOAD: I know a good place to get a drink around here. Follow me!")
 
 def forest():
+    global magic_num
     output("TOAD: Lets try to stay clear from any monsters when we hike through this forest")
     output("TOAD: Oh! and by the way, let me teach you some magic before we continue")
     output("TOAD: Brace yourself!, I'm going to transfer a spell into you")
-    output("qswdfasdfhasdfjasdkfjkadsfhasdfkadsfhasdfuasfjasdkfjkadsfhasdfuasifosifhasiohehsdfjasjkdfjkalsdfhaweuifhasodfhajsdfhjasfdsjkdfjkalsdfhaweuifhasodfhajsdfhjasfd")
+    output("TOAD: I am have to shout a random bee movie script line for it to work")
+    output("TOAD:Ready?")
+    
+    time.sleep(1)
+    for i in range(100):
+        print("You're flying outside the hive, talking to humans that attack our homes with the power washers and M-80s! One eighth a stick of dynamite!")
+        time.sleep(0.04)
     magic_num += 1
     output("TOAD: Alright!, I just transfered a fire spell into you. You can now use it in battle!")
-forest()
+    output(f"{name.upper()}: I feel a little uneasy")
+    output("TOAD: That's normal for your first spell, don't worry, you will get used to it")
+    output("TOAD: Now, Onward!")
+    output("TOAD: We are almost near the reed forests, be careful for monsters")
+    output("TOAD: Look, an imp ahead!, be careful, the creatures can be very dangerous")
+
+def reed():
+    output("TOAD: That was a close one! lets continue on, there should be only two more miles until we get to the Lich")
+    output("TOAD")

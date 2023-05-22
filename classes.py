@@ -163,7 +163,7 @@ class armor:
 bartender = monster(50,10,0.5,1,"Bartender","blasts you with his colazuka")
 troll = monster(50,15,0.7,1,"Troll","pulls out his pizza box and whacks you")
 wolf = monster(80,25,0.6,2,"Wolf", "lunges and bites you")
-bone = monster(120,30,0.8,2,"bone", "punches you")
+bone = monster(120,30,0.8,2,"Bone", "punches you")
 lich = monster(150,50,0.8,3,"Lich", "yells bad jokes at you until your brain starts hurting")
 wizard = monster(150,44,0.9,3,"Wizard", "blasts a fireball at you")
 worm = monster(200,30,0.9,3,"Worm", "trips over a cheerio and launches it at you")

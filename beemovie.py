@@ -1085,7 +1085,7 @@
 # Where are you going?
 # To the final Tournament of Roses parade in Pasadena.
 # They've moved it to this weekend because all the flowers are dying.
-# It's the Last Chance I'll ever have to see it.
+# It's the last chance I'll ever have to see it.
 # Vanessa, I just wanna say I'm sorry.
 # I never meant it to turn out like this.
 # I know. Me neither.
@@ -1313,7 +1313,7 @@
 # But we're not done yet.
 # Listen, everyone!
 # This runway is covered with the last pollen from the last flowers available anywhere on Earth.
-# That means this is our Last Chance. We're the only ones who make honey, pollinate flowers and dress like this.
+# That means this is our last chance. We're the only ones who make honey, pollinate flowers and dress like this.
 # If we're gonna survive as a species, this is our moment! What do you say?
 # Are we going to be bees, or just Museum of Natural History keychains?
 # We're bees!

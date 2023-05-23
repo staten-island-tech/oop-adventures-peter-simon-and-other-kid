@@ -1,4 +1,5 @@
 from classes import *
+from story import *
 name = input("Hello Adventurer! What is your name? ")
 hp = 100 
 hp_t = 100

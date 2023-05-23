@@ -3,6 +3,10 @@ from story import *
 from storyline import *
 from actions import *
 
-#intro()
+intro()
 shop()
+forest()
+impDialogue()
+reed()
+trollDialogue()
 

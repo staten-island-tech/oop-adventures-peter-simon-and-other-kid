@@ -24,6 +24,7 @@ class weapon:
         self.name = name
     
     def equip(self):
+        print(f"{self.name} equiped")
         hit = self.hit
         power = self.power
         weapon = self.name

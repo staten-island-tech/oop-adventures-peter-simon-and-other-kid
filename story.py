@@ -1,8 +1,10 @@
-from classes import *
+from classes import output
+
 from actions import *
 import time
+
 def intro():
-    output("Once Upon a Time....")
+    output("olsidfgbh")
     time.sleep(1)
     output("Long ago, peace was restored. Monsters were eliminated")
     time.sleep(1)
@@ -53,8 +55,21 @@ def forest():
     output("TOAD: That's normal for your first spell, don't worry, you will get used to it")
     output("TOAD: Now, Onward!")
     output("TOAD: We are almost near the reed forests, be careful for monsters")
-    output("TOAD: Look, an imp ahead!, be careful, the creatures can be very dangerous")
+    output("TOAD: Look, an imp ahead!, be careful, these creatures can be very dangerous")
 
 def reed():
     output("TOAD: That was a close one! lets continue on, there should be only two more miles until we get to the Lich")
-    output("TOAD")
+    output("TOAD: 1 mile in.....")
+    output("TOAD: Pheeeeeooo, Im tired, lets call it a day for today")
+    output("TOAD: Alright, I'm going to sleep, you keep guard. Be careful, there are many trolls here. Here, take my Golden Scimitar")
+    gold.equip()
+    output("TOAD: zzzzzzzzzzzzzzzzzzzz")
+    output(f"{name.upper}: Gosh, I'm tired, I dont know how long I can stay awake for *Yawn*")
+    output(f"{name.upper}: It wont hurt if I go to sleep, I dont see any trolls anyway")
+    output(f"{name.upper}: zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz")
+    output("*Morning time*")
+    output("TOAD: W-where are we?")
+    output(f"{name.upper}: I think we are in a trolls lair")
+    output("TOAD: LET US OUT OF HEERRRRREEE!!!!!!!!!!")
+
+    

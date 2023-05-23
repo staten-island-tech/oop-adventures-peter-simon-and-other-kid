@@ -1,13 +1,15 @@
 import random
-from actions import *
+
 import sys
 import time
+
 magic = {}
 def test(prob):
     return random.randint(0,1) > prob
 
 
 typing_speed = 150 #wpm
+
 def output(t):
     for l in t:
         sys.stdout.write(l)

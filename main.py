@@ -1,12 +1,9 @@
-from classes import *
 from story import *
 from storyline import *
-from actions import *
-
-intro()
+intro(user.name)
 shop()
-forest()
+forest(user.name)
 impDialogue()
-reed()
+reed(user.name)
 trollDialogue()
 

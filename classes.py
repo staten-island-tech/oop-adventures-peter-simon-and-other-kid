@@ -1,5 +1,4 @@
 import random
-
 import sys
 import time
 
@@ -9,16 +8,64 @@ def test(prob):
 
 
 typing_speed = 150 #wpm
+class Output:
+    def output(self,t):
+        for l in t:
+            sys.stdout.write(l)
+            sys.stdout.flush()
+            time.sleep(random.random()*10.0/typing_speed)
+        print('')
 
-def output(t):
-    for l in t:
-        sys.stdout.write(l)
-        sys.stdout.flush()
-        time.sleep(random.random()*10.0/typing_speed)
-    print('')
+   
 
-def die():
-    print("Game Over!")
+
+
+
+class User:
+    def __init__(self):
+        self.name = input("Hello Adventurer! What is your name? ")
+        self.hp = 100 
+        self.hp_t = 100
+        self.exp = 0 
+        self.gold = 100
+        self.hit = 0.7
+        self.power = 30
+        self.item = "Wooden Sword"
+        self.armor = "none"
+        self.magic_num = 0
+
+    def change_hp(HP):
+        output(hp)
+        if HP + hp > hp_t:
+            HP = (HP + hp) - hp_t
+            output("You have reached your maximum hp! ")
+        hp += HP
+        if HP > 0:
+            output(f"Your hp was increased by {abs(HP)} ")
+        if HP < 0:
+            output(f"Your hp was decreased by {abs(HP)} ")
+        output(f"Your current hp is {hp}")
+
+    def change_exp(EXP):
+        exp += EXP
+        if EXP >= 0:
+            output(f"Your exp increased by {abs(EXP)}")
+        output(f"Your new exp is {exp} ")
+
+    def change_gold(GOLD):
+        if gold - GOLD < 0:
+            output("You do not have enough gold for this item")
+        else:
+            gold += GOLD
+            if GOLD > 0:
+                output(f"You gained {abs(GOLD)} gold")
+            if GOLD < 0:
+                output(f"You lost {abs(GOLD)} gold")
+        output(f"You have {gold} gold left")
+    def die(self):
+        print("Game Over!")
+
+user = User()
 class weapon:
     def __init__(self,power,hit,name):
         self.power = power

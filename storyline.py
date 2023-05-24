@@ -1,5 +1,4 @@
 from classes import *
-from actions import *
 def shop():
     dialogue = int(input('Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
     if dialogue == 1:

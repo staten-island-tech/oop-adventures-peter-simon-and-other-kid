@@ -453,14 +453,49 @@ def tiamatDialogue():
             print("TIAMAT: speak for yourself mr. or mrs. brain damage.")
 
 def chaosDialogue():
-    print("CHAOS: are you Barry B Benson?")
+    print("CHAOS: what are you doing in my house? are you Barry B Benson?")
     barryChoice = int(input("1: Yes, 2: No"))
     if barryChoice == 1:
         beelaw1 = str(input('CHAOS: whats bee law number 1?'))
         beelaw1.lower()
         if beelaw1 == "absolutely no talking to humans":
-            print("CHAOS: man you're good. deliver my package")
+            print("CHAOS: man you're good. now gimme my package")
             packageChoice = int(input("1: what package?"))
+            if packageChoice == 1:
+                print("CHAOS: the honey, idiot. you've gotta start thinking bee. i dont feed my kids for nothing") # THINKING BEE! THINKING BEE! THINKING BEE!
+                honeyChoice = int(input("1: I lost it, 2: What honey?"))
+                if honeyChoice == 1:
+                    print("CHAOS: how did you lose it?")
+                    lossChoice = int(input("1: uhhhh..."))
+                    if lossChoice == 1:
+                        print("CHAOS: you're not Barry B. Benson. are you a florist?")
+                        florismChoice = int(input("1: yes, 2: no"))
+                        if florismChoice == 1:
+                            florist = str(input("CHAOS: alright tell me your name."))
+                            if florist == "Vanessa Bloome":
+                                print("CHAOS: oh goody! show me your roses")
+                                roseChoice = int(input("1: what roses?"))
+                                if roseChoice == 1:
+                                    print("CHAOS: forget that last part, are you her husband?")
+                                    husbandChoice = int(input("1: Yes, 2: No"))
+                                    if husbandChoice == 1:
+                                        allergy = str(input("CHAOS: allergies?"))
+                                        if allergy == "bees":
+                                            print("CHAOS: what do you think of bees?")
+                                            beeChoice = int(input("1: I don't know"))
+                                            if beeChoice == 1:
+                                                print("CHAOS: you're a liar. hold on to your honey bucko")
+                                        else:
+                                            print("CHAOS: in five minutes that will be you. let's fight")
+                                    elif husbandChoice == 2:
+                                        print("CHAOS: thank you for your honesty. die anyway")
+                                else:
+                                    print("CHAOS: you're dead. let's fight. i gotta feed my wife and kids soon")
+                            else:
+                                print("CHAOS: you're a liar. get me a pizza")
+                                pizzaChoice = int(input("1: why?"))
+                                if pizzaChoice == 1:
+                                    print("CHAOS: my kids would love that")
         else:
             print("CHAOS: THINK BEE! THINK BEE! YOU SHALL DIE")
 

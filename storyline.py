@@ -500,4 +500,18 @@ def chaosDialogue():
             print("CHAOS: THINK BEE! THINK BEE! YOU SHALL DIE")
 
 
-chaosDialogue()
+
+def swap():
+    x = float(input("type a number"))
+    y = float(input("type another number"))
+    if x > y:
+        x = (y - x)
+        y = (y - x)
+        x = (x + y)
+    elif x < y:
+        y = (x - y)
+        x = (x - y)
+        y = (x + y)
+    print(x)
+    print(y)
+swap()

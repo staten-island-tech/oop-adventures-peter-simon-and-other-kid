@@ -453,7 +453,7 @@ def tiamatDialogue():
             print("TIAMAT: speak for yourself mr. or mrs. brain damage.")
 
 def chaosDialogue():
-    print("CHAOS: what are you doing in my house? are you Barry B Benson?")
+    print("CHAOS: oh dear lord... what are you doing in my house? are you Barry B Benson?")
     barryChoice = int(input("1: Yes, 2: No"))
     if barryChoice == 1:
         beelaw1 = str(input('CHAOS: whats bee law number 1?'))
@@ -496,22 +496,39 @@ def chaosDialogue():
                                 pizzaChoice = int(input("1: why?"))
                                 if pizzaChoice == 1:
                                     print("CHAOS: my kids would love that")
+                                    kidsChoice = int(input("1: i got nothing"))
+                                    if kidsChoice == 1:
+                                        print("CHAOS: there was literally a pizza man whom you beat the crap out of")
+                                        pizzamanChoice = int(input("1: that was an imp what do you mean?"))
+                                        if pizzamanChoice == 1:
+                                            print("CHAOS: imp? what do you mean 'imp?!' he's critically wounded and is in the hospital!")
+                                            woundsChoice = int(input("1: ok and?"))
+                                            if woundsChoice == 1:
+                                                print("CHAOS: HE WAS 14! what the hell did he do to you?!")
+                                                fourteenChoice = int(input("1: he hit me in the face with a pizza box"))
+                                                if fourteenChoice == 1:
+                                                    print("CHAOS: ...because you KICKED HIM OFF HIS BIKE AND ONTO THE PAVEMENT! have you been living under a rock?! and what about that man with cotard's syndrome?!") # it's a condition where someone thinks they're dead or have missing body parts, organs, blood, etc.
+                                                    syndromeChoice = int(input("1: you mean the kraken?"))
+                                                    if syndromeChoice == 1:
+                                                        print("CHAOS: HE HAD THREE KIDS AND TWO NEPHEWS! NOW HE'S DEAD. GOOD JOB. YOU'RE SO HELPFUL. *beep boop beep*")
+                                                        print("DISPATCHER: 911 what's your emergency?")
+                                                        print("CHAOS: theres an escaped mental patient in my house! 19321 rock avenue! come quickly!!! *hang up* now lets fight...")
         else:
             print("CHAOS: THINK BEE! THINK BEE! YOU SHALL DIE")
 
+chaosDialogue()
 
-
-def swap():
-    x = float(input("type a number"))
-    y = float(input("type another number"))
-    if x > y:
-        x = (y - x)
-        y = (y - x)
-        x = (x + y)
-    elif x < y:
-        y = (x - y)
-        x = (x - y)
-        y = (x + y)
-    print(x)
-    print(y)
-swap()
+# def swap():
+#     x = float(input("type a number"))
+#     y = float(input("type another number"))
+#     if x > y:
+#         x = (y - x)
+#         y = (y - x)
+#         x = (x + y)
+#     elif x < y:
+#         y = (x - y)
+#         x = (x - y)
+#         y = (x + y)
+#     print(x)
+#     print(y)
+# swap()

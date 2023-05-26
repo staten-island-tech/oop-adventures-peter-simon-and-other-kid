@@ -69,4 +69,7 @@ def reed(name):
     story.output(f"{name.upper()}: I think we are in a trolls lair")
     story.output("TOAD: LET US OUT OF HEERRRRREEE!!!!!!!!!!")
 
+def bone_story():
+    story.output("TOAD: Look a bone!")
+
     

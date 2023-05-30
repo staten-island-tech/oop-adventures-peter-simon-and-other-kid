@@ -4,6 +4,7 @@
 # from beemovie import *
 
 from actions import change_hp, change_gold, hp, hp_t, gold # comma
+from classes import monsters
 
 def shop():
     dialogue = int(input('BARTENDER: Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -181,7 +182,7 @@ def impDialogue():
     print("IMP: Order on the Domino's app and earn points towards free pizza!")
     pizzaChoice = int(input("Order on the Domino's App? 1: Yes, 2: No, 3: Act stupid"))
     if pizzaChoice == 1:
-        eatPizza = int(input('The imp hands you his pizza. Eat some? 1: Yes, 2: No, 3: Shove it down his throat')) # If I had a nickel for every time I ate a whole pizza pie in this building, I'd have three nickels.
+        eatPizza = int(input('The imp hands you his pizza. Eat some? 1: Yes, 2: No, 3: Shove it down his throat')) # If I had a nickel for every time I ate a whole pizza pie in this building, I'd have four nickels.
         if eatPizza == 1:
             print('There are expired boogers on it and you lose 50 HP.')
             change_hp(hp,-50,hp_t)
@@ -230,7 +231,7 @@ def trollDialogue():
         print('The troll stares in disbelief.')
     elif dialogueChoice == 5:
         print("You trip over a pebble and break your neck. GAME OVER")
-        change_hp(hp,100,hp_t) 
+        change_hp(hp,-100,hp_t) 
     else:
         print('RUN AWAY RUN AWAAAAYYYYYY')
         return
@@ -277,13 +278,22 @@ def BoneDialogue():
 
 def LichDialogue():
     print("LICH: Shall I pick your nose, good sir?")
-    noseChoice = int(input("1: Let him pick your nose, 2: Don't let him pick your nose, 3: Blast him with your Colazooka!"))
+    noseChoice = int(input("1: Let him pick your nose, 2: Don't let him pick your nose, 3: Blast him with your Colazooka, 4: Listen to a joke"))
     if noseChoice == 1:
         print('The lich shoves a Colazooka up your nose and pulls the trigger. You are now a pile of Mentos. Game Over')
     elif noseChoice == 2:
         print('Nothing happens. You fight anyway.')
     elif noseChoice == 3:
         print('The lich snatches it from you before you can use it. He pulls the trigger and you explode. GAME OVER')
+    elif noseChoice == 4:
+        print("LICH: where did the 7 go?")
+        trashjokeChoice = int(input("1: what?"))
+        if trashjokeChoice == 1:
+            print("LICH: HOME! haha get it? he went HOME! get it cuz it says home on the 7 key? on the number pad!!!")
+            print("The pain hurts worse than a spike up your pike.")
+            jokeReaction = int(input("1: just kill me at this point"))
+            if jokeReaction == 1:
+                print("LICH: how dare you not laugh! lets fight!!!") # Look up 101 Wacky Computer Jokes for more info. I am not responsible for any cancers you get.
     else:
         print('The lich punches you into space for being a fencesitter. Game Over')
 

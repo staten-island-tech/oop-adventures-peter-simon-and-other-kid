@@ -311,17 +311,17 @@ def WizardDialogue():
     else:
         print("The wizard picks his nose and has you eat it. Nothing happens.")
 
-def wormDialogue():
+def wormDialogue(): # pop musicians deserve to have colazookas shoved up their hinies until they submit to the coca cola company
     print("WORM: jfjiefjiwejwfjiweef")
     wormChoice = int(input("1: 'The government is controlled by PepsiCo', 2: 'Christmas is in May,' 3: phhhhtphtphtphtphtphp"))
     if wormChoice == 1:
-        print('WORM: FAKE!')
+        print('WORM: FAKE! lets fight')
     elif wormChoice == 2: # to infinity and beyond
-        print('WORM: You got that right.')
+        print('WORM: You got that right. LETS FIGHT ANYWAY!')
     elif wormChoice == 3:
         print('You spat on the worm. FIGHT!!')
     else:
-        print("Please pick others' noses with a keyboard. DO IT!")
+        print("Please pick others' noses with a keyboard. FIGHT!!")
 
 def medusaDialogue():
     print("MEDUSA: oh baby baby baby OOOOOHHH oh baby baby baby NOOOOOOOO")    

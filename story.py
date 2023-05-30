@@ -1,5 +1,6 @@
 import time
 from classes import Output
+from classes import wooden
 story = Output()
 def intro(name):
     time.sleep(1)
@@ -71,5 +72,30 @@ def reed(name):
 
 def bone_story():
     story.output("TOAD: Look a bone!")
+    story.output("TOAD: Beware, the bone might look weak but his attacks pack a punch!")
+    story.output("You stare at the Bone")
+    story.output("...")
+    Story.output("TOAD: Go on now, I'll watch")
 
-    
+def lich_story():
+    story.output("The room falls into darkness, a LICH appears")
+    story.output("TOAD: The lich is the first of CHAOS' bosses. He can be very dangerous")
+    story.output("TOAD: Try and attack his weak spot...")
+    story.output("...")
+    story.output("TOAD: WELL I'M NOT GONNA TELL YOU WHAT IT IS")
+
+def wizard_story():
+    story.output("TOAD: Behold the keeper of Magic, the almighty Wizard")
+
+def worm_story():
+    story.output("WIZARD: Alright, ill give you my magic")
+    for i in range(100):
+        print("Dddddddddaaaaaaaaaaaaaaaarrrrrrrrrrrrrrkkkkkkkkkkkkkkkknnnnnnnnnnnneeeeeeeeeeeeessssssssssssssssss sppppppeeeeeeeeeeeeeeeellllllllllllllllllllll")
+        time.sleep(0.04)
+    magic_num += 1
+    story.output("WIZARD: Alright, you have learned a spell. Use it wisely. If you want to learn more, go and fight the worm. He has the mouth of horrible singing. Get that if you want to learn a spell")
+    story.output("WIZARD: Now Leave!")
+    story.output("TOAD: C'mon lets go!")
+    story.output("*You arrive at the worms castle*")
+    story.output("TOAD: *knock* *knock* *knock*")
+

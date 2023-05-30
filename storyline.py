@@ -3,8 +3,7 @@
 # from attack import * # If we test it in main we can just import everything from each file so we don't have any problems. We have no reason to import everything from each individual file
 # from beemovie import *
 
-def BarryBBenson():
-    open
+from actions import change_hp, change_gold, hp, hp_t, gold # comma
 
 def shop():
     dialogue = int(input('BARTENDER: Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -514,8 +513,7 @@ def chaosDialogue():
                                                         print("DISPATCHER: 911 what's your emergency?")
                                                         print("CHAOS: theres an escaped mental patient in my house! 19321 rock avenue! come quickly!!! *hang up* now lets fight...")
         else:
-            print("CHAOS: THINK BEE! THINK BEE! YOU SHALL DIE")
-
+            print("CHAOS: start THINKING BEE! THINKING BEE! YOU SHALL DIE")
 chaosDialogue()
 
 # def swap():

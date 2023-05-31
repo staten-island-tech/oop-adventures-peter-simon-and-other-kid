@@ -4,7 +4,7 @@
 # from beemovie import *
 
 from actions import change_hp, change_gold, hp, hp_t, gold # comma
-from classes import monsters
+# from classes import monsters
 
 def shop():
     dialogue = int(input('BARTENDER: Give me your wallet or get the heck out. 1: Ask for drink, 2: Buy something else, 3: Leave, 4: Fight'))
@@ -182,7 +182,7 @@ def impDialogue():
     print("IMP: Order on the Domino's app and earn points towards free pizza!")
     pizzaChoice = int(input("Order on the Domino's App? 1: Yes, 2: No, 3: Act stupid"))
     if pizzaChoice == 1:
-        eatPizza = int(input('The imp hands you his pizza. Eat some? 1: Yes, 2: No, 3: Shove it down his throat')) # If I had a nickel for every time I ate a whole pizza pie in this building, I'd have four nickels.
+        eatPizza = int(input('The imp hands you his pizza. Eat some? 1: Yes, 2: No, 3: Shove it down his throat')) # If I had a nickel for every time I ate a whole pizza pie in this building, I'd have four (soon five!!) nickels.
         if eatPizza == 1:
             print('There are expired boogers on it and you lose 50 HP.')
             change_hp(hp,-50,hp_t)
@@ -242,7 +242,7 @@ def WolfDialogue():
     dialogueChoice = int(input("1: Eat the chili, 2: Don't eat the chili, 3: Shove it in the wolf's face"))
     if dialogueChoice == 1:
         print("Your stomach explodes. Taco Bell move. You lose 99 HP.")
-        change_hp(hp,100,hp_t)
+        change_hp(hp,99,hp_t)
     if dialogueChoice == 2:
         print('Nothing happens and the wolf is disgruntled. FIGHT!!')
         wolf.attack()
@@ -287,7 +287,7 @@ def LichDialogue():
         print('The lich snatches it from you before you can use it. He pulls the trigger and you explode. GAME OVER')
     elif noseChoice == 4:
         print("LICH: where did the 7 go?")
-        trashjokeChoice = int(input("1: what?"))
+        trashjokeChoice = int(input("1: "))
         if trashjokeChoice == 1:
             print("LICH: HOME! haha get it? he went HOME! get it cuz it says home on the 7 key? on the number pad!!!")
             print("The pain hurts worse than a spike up your pike.")
@@ -327,13 +327,13 @@ def medusaDialogue():
     print("MEDUSA: oh baby baby baby OOOOOHHH oh baby baby baby NOOOOOOOO")    
     medusaChoice = int(input("1: Stay and listen, 2: Fling boogers at her, 3: Sing an equally bad song"))
     if medusaChoice == 1:
-        print("You turn to stone and die. GAME OVER")
+        print("You turn to stone and die. FIGHT ANYWAY!")
     elif medusaChoice == 2:
         print("She stops and flings them back in your mouth. FIGHT!")
     elif medusaChoice == 3:
-        print("Rebecca Black deserves a Colazooka up the hiney")
+        print("Rebecca Black deserves a Colazooka up the hiney. FIGHT!")
     else:
-        print("You turn to stone for three seconds, causing your boogers to fall off and bounce to Medusa's mouth.")
+        print("You turn to stone for three seconds, causing your boogers to fall off and bounce to Medusa's mouth. FIGHT!")
 
 def karyDialogue():
     print("KARY: I have been picking my nose for the past five hours")
@@ -347,7 +347,7 @@ def karyDialogue():
     elif karyChoice == 4:
         print("creating terror and government purges acting out all of your monstrous urges big brother plots that would make orwell blush these are the things that sure give me a rush spying on lenin and murdering trotsky vexing the west with his communist plotsky turning your dreams into scary nightmares that is the way i forget all my cares when the germans invade moscow and the weather's vile i simply look on as they all freeze to death and that really makes me smile feasting like ivan while serfs live in rations conquering dozens of satellite nations starting my own personality cult doing away with those who might revolt sending your critics to rot in siberia thats how you get populations to fear ya building a wall down the streets of berlin this kind of thing makes me flash quite a grin if the people call for freedom or democracy i simply bup off everybody until theres nobody left but me")
     else:
-        print("You get punched in the face. WOOHOO")
+        print("You get punched in the face. WOOHOO") # 0:50 as in the time, force hooks with jabs, don't quick dodge Razor Uppercut
 
 def krakenDialogue():
     print("KRAKEN: i am dead") # do not try this at home
@@ -453,7 +453,7 @@ def tiamatDialogue():
                 elif snotChoice == 2:
                     print("TIAMAT: STOP WHAT THE HELL?! GROSS IT HURTS LIKE HELL RUN AWAY RUN AWAYYYYYY")
                 elif snotChoice == 3:
-                    print("TIAMAT: EWWW WHAT THE HELL THATS DISGUSTING!!! DONT NEVER DO THAT AGAIN!!! EVER!!!!!!")
+                    print("TIAMAT: EWWW WHAT THE HELL THATS DISGUSTING!!! DONT EVER DO THAT AGAIN!!! EVER!!!!!!")
                 print("FIGHT!!")
     if loveChoice == 2:
         print("TIAMAT: shut up")
@@ -519,7 +519,7 @@ def chaosDialogue():
                                                     print("CHAOS: ...because you KICKED HIM OFF HIS BIKE AND ONTO THE PAVEMENT! have you been living under a rock?! and what about that man with cotard's syndrome?!") # it's a condition where someone thinks they're dead or have missing body parts, organs, blood, etc.
                                                     syndromeChoice = int(input("1: you mean the kraken?"))
                                                     if syndromeChoice == 1:
-                                                        print("CHAOS: HE HAD THREE KIDS AND TWO NEPHEWS! NOW HE'S DEAD. GOOD JOB. YOU'RE SO HELPFUL. *beep boop beep*")
+                                                        print("CHAOS: HE HAD THREE KIDS AND TWO NEPHEWS! NOW HE'S DEAD. I READ IT IN THE NEWS. GOOD JOB. YOU'RE SO HELPFUL. *beep boop beep*")
                                                         print("DISPATCHER: 911 what's your emergency?")
                                                         print("CHAOS: theres an escaped mental patient in my house! 19321 rock avenue! come quickly!!! *hang up* now lets fight...")
         else:

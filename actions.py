@@ -1,4 +1,3 @@
-name = input("Hello Adventure! What is your name? ")
 hp = 100 
 hp_t = 100
 exp = 0 

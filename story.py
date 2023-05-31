@@ -99,3 +99,6 @@ def worm_story():
     story.output("*You arrive at the worms castle*")
     story.output("TOAD: *knock* *knock* *knock*")
 
+def medusa_story():
+    
+

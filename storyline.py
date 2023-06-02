@@ -109,7 +109,7 @@ def shop():
                 elif gold < 500:
                     print("BARTENDER: Your body pillow is sad now.")
         if goodsChoice == 2:
-            armor_choice = input(int("BARTENDER: Are you going commando? 1: Buy leather armor, 2: Buy iron armor, 3: Buy silver armor, 4: Buy titanium armor, 5: Buy gold armor, 6: Buy diamond armor"))
+            armor_choice = int(input("BARTENDER: Are you going commando? 1: Buy leather armor, 2: Buy iron armor, 3: Buy silver armor, 4: Buy titanium armor, 5: Buy gold armor, 6: Buy diamond armor"))
             if armor_choice == 1:
                 if gold >= 100:
                     equipChoice = int(input('You now have Leather Armor. Equip armor? 1: Yes, 2: No'))
@@ -430,7 +430,7 @@ def krakenDialogue():
 
 def tiamatDialogue():
     print("TIAMAT: what is love?")
-    loveChoice = int(input("1: baby don't hurt me, 2: i'm not your english teacher. look it up"))
+    loveChoice = int(input("1: baby don't hurt me, 2: i'm not your english teacher. look it up, 3: leave"))
     if loveChoice == 1:
         print("TIAMAT: no more...")
         nomoreChoice = int(input("1: What is love? 2: Pulverize him, 3: Stop speaking"))
@@ -460,6 +460,8 @@ def tiamatDialogue():
         shutupChoice = int(input("1: takes one to know one"))
         if shutupChoice == 1:
             print("TIAMAT: speak for yourself mr. or mrs. brain damage.")
+    if loveChoice >= 3:
+        print("TIAMAT: alright")
 
 def chaosDialogue():
     print("CHAOS: oh dear lord... what are you doing in my house? are you Barry B Benson?")
@@ -521,7 +523,29 @@ def chaosDialogue():
                                                     if syndromeChoice == 1:
                                                         print("CHAOS: HE HAD THREE KIDS AND TWO NEPHEWS! NOW HE'S DEAD. I READ IT IN THE NEWS. GOOD JOB. YOU'RE SO HELPFUL. *beep boop beep*")
                                                         print("DISPATCHER: 911 what's your emergency?")
-                                                        print("CHAOS: theres an escaped mental patient in my house! 19321 rock avenue! come quickly!!! *hang up* now lets fight...")
+                                                        print("CHAOS: theres an escaped mental patient in my house! 19321 rock avenue! come quickly!!! *hang up* while they arrive i'll have my wife and kids fight you!")
+                                                        kary.fight()
+                                                        kraken.fight()
+                                                        tiamat.fight()
+                                                        print("CHAOS: YOU DARE KILL MY WIFE AND CHILDREN??? I WILL KILL YOU AND KICK YOU IN THE HINEY!")
+                                                        print("1: i don't care")
+                                                        print("CHAOS: you wanna do it the hard way? i'll feed you oatmeal raisin cookies for eternity!")
+                                                        print("1: n-no don't do this to me")
+                                                        print("CHAOS: WHILE YOU'RE AT IT I'LL MAKE YOU LISTEN TO JUSTIN BIEBER...")
+                                                        print("1: NO! NO! DONT HURT ME!! HELP!!!")
+                                                        print("CHAOS: and ill make you watch cooking shows set to chargeman ken! hahahahahahahhahahah") # pure evil!!!!!
+                                                        print("1: NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!")
+                                                        print("CHAOS: that is if i win")
+                                                        print('1: alright bring it on!')
+                                                    else:
+                                                        print("CHAOS: he's dead. fight or we watch chargeman ken") 
+                                                else:
+                                                    print("CHAOS: forget it. i will read you 101 wacky computer jokes for all eternity! (flips page)")
+                                                    print("1: no... NO..... nNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
+                                            else:
+                                                print("CHAOS: i would be too if i kept talking to you. lets fight")
+                                        else:
+                                            print("CHAOS: nevermind that. you bring me pizza, we watch chargeman ken, and you die. then we'll see who's an imp")
         else:
             print("CHAOS: start THINKING BEE! THINKING BEE! YOU SHALL DIE")
 chaosDialogue()

@@ -94,11 +94,63 @@ def worm_story():
         time.sleep(0.04)
     magic_num += 1
     story.output("WIZARD: Alright, you have learned a spell. Use it wisely. If you want to learn more, go and fight the worm. He has the mouth of horrible singing. Get that if you want to learn a spell")
+    story.output("WIZARD: Darkenss makes enemies harder to hit you")
     story.output("WIZARD: Now Leave!")
     story.output("TOAD: C'mon lets go!")
     story.output("*You arrive at the worms castle*")
     story.output("TOAD: *knock* *knock* *knock*")
 
 def medusa_story():
-    
+    story.output("TOAD: Now that we got his mouth we can go back to the wizard")
+    story.output("WIZARD: Have you got what I asked")
+    story.output("TOAD: Yes")
+    story.output("WIZARD: Then I will teach you another spell!")
+    for i in range(100):
+        print("hhhhhhhhhhhhhhhheeeeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaaaaallllllllllllllllllllll sppppppeeeeeeeeeeeeeeeellllllllllllllllllllll")
+        time.sleep(0.04)
+    magic_num += 1
+    story.output("WIZARD: The heal spell heals you")
+    story.output("WIZARD: If you want to learn more, go fight the medusa and take a snake off her head")
+    story.output("WIZARD: Now Leave!")
+    story.output("TOAD: Lets go, we have to go north 20 miles!")
+    story.output("TOAD: HELLOOOOO?")
 
+def kary_story():
+    story.output("WIZARD: Have you got what I asked")
+    story.output("TOAD: Yes")
+    story.output("WIZARD: Then I will teach you another spell!")
+    for i in range(100):
+        print("ssssssssssssssssssssstttttttttttttttttttttttttuuuuuuuuuuuuuuuuuuuuuuuuunnnnnnnnnnnnnnnnnnnnnn sppppppeeeeeeeeeeeeeeeellllllllllllllllllllll")
+        time.sleep(0.04)
+    magic_num += 1
+    story.output("WIZARD: The stun spell stuns enemies so they can't attack you. Be careful, they are only temperarily stunned")
+    story.output("WIZARD: Oh, and did I mention.....")
+    story.output("WIZARD: I also work for......")
+    story.output("WIZARD: KARY!")
+    story.output("WIZARD: One of CHAOS'S henchman. She is a fire boss, and you have fell right into my trap!")
+    story.output("*The Wizard pulls trapdoor lever and you fall into Kary's lair*")
+def kraken_story():
+    story.output("KARY: Fine you have beaten me. I give up")
+    story.output("KARY: JUST KIDDING")
+    story.output("*Pulls lever and you fall into the krakens lair*")
+
+def tiamat_story():
+    story.output("KRAKEN: Fine you have beaten me. I gi-")
+    story.output("TOAD: Stop, we know your trick. You are going to pull a lever and send us into CHAOS'S most powerful henchmen, Tiamat. I won't fall for this")
+    story.output("KRAKEN: Sorry, but you're too late!")
+    story.output("KRAKEN: *pulls lever*")
+    story.output("*You and Toad fall into Tiamats dungeon")
+
+def chaos_story():
+    story.output("TIAMAT: Well, Well, Well, If you must see the boss, I guess you my preceed")
+    story.output("TIAMAT: CHAOS, you have a visiter")
+
+
+def end():
+    story.output("Peace is finally restored")
+    story.output("All evils are gone")
+    story.output(f"TOAD: {name}, You did it!")
+    story.output("TOAD: WHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOHHHHHHHHHHHHHHHHHHHHOOOOOOOOOOOOOO")
+    story.output("The End!")
+    time.sleep(1)
+    story.output("Developed by: Simon Saffayeh, Peter Delwita, and Jeff Li")

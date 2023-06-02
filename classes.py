@@ -64,6 +64,7 @@ class User:
         output(f"You have {gold} gold left")
     def die(self):
         print("Game Over!")
+        exit()
 
 user = User()
 class weapon:

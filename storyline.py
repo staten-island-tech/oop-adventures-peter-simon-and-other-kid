@@ -244,10 +244,10 @@ def WolfDialogue():
     if dialogueChoice == 1:
         print("Your stomach explodes. Taco Bell move. You lose 99 HP.")
         change_hp(hp,99,hp_t)
-    if dialogueChoice == 2:
+    elif dialogueChoice == 2:
         print('Nothing happens and the wolf is disgruntled. FIGHT!!')
         wolf.attack()
-    if dialogueChoice == 3:
+    elif dialogueChoice == 3:
         print("You stuff the wolf's face with chili. It explodes in his face. Run away?")
         runChoice = int(input("1: Run away, 2: Don't run away"))
         if runChoice == 1:
@@ -274,7 +274,7 @@ def BoneDialogue():
     elif boneDialogue == 3:
         print('Where does he get his supply of laurels?') # In Castlevania II, some dude in Laruba Mansion gives you free laurels if you talk with him. He never exhausts his supply. Where does he get it?
         print('Before the bone responds, you are smitten by the ghost of Asa Griggs Candler. Game Over')
-    elif boneDialogue == 4:
+    elif boneDialogue > 3 or boneDialogue < 0:
         bone.fight()
 
 def LichDialogue():
@@ -468,14 +468,20 @@ def chaosDialogue():
     print("CHAOS: oh dear lord... what are you doing in my house? are you Barry B Benson?")
     barryChoice = int(input("1: Yes, 2: No"))
     if barryChoice == 1:
-        beelaw1 = str(input('CHAOS: whats bee law number 1?'))
-        beelaw1.lower()
+        beelaw1 = "get the answer"
+        while beelaw1 != "absolutely no talking to humans":
+            beelaw1 = str(input('CHAOS: whats bee law number 1? all lowercase'))
+            beelaw1.lower()
         if beelaw1 == "absolutely no talking to humans":
             print("CHAOS: man you're good. now gimme my package")
-            packageChoice = int(input("1: what package?"))
+            packageChoice = "get the answer"
+            while packageChoice != 1:
+                packageChoice = int(input("1: what package?"))
             if packageChoice == 1:
                 print("CHAOS: the honey, idiot. you've gotta start thinking bee. i dont feed my kids for nothing") # THINKING BEE! THINKING BEE! THINKING BEE!
-                honeyChoice = int(input("1: I lost it, 2: What honey?"))
+                honeyChoice = 3
+                while honeyChoice > 2 or honeyChoice < 1:
+                    honeyChoice = int(input("1: I lost it, 2: What honey?"))
                 if honeyChoice == 1:
                     print("CHAOS: how did you lose it?")
                     lossChoice = int(input("1: uhhhh..."))
@@ -547,8 +553,6 @@ def chaosDialogue():
                                                 print("CHAOS: i would be too if i kept talking to you. lets fight")
                                         else:
                                             print("CHAOS: nevermind that. you bring me pizza, we watch chargeman ken, and you die. then we'll see who's an imp")
-        else:
-            print("CHAOS: start THINKING BEE! THINKING BEE! YOU SHALL DIE")
 chaosDialogue()
 
 # def swap():

@@ -53,7 +53,8 @@ def shop():
                     equipChoice = int(input('You now have Iron Sword. Equip sword? 1: Yes, 2: No'))
                     change_gold(-50)
                     if equipChoice == 1:
-                        iron.equip()
+                        # iron.equip() Revert these lines to actual code once I import them (ctrl+/)
+                        print("Congrats. Now go home and cry yourself to sleep.")
                     elif equipChoice == 2:
                         print('Nothing happens.')
                     else:
@@ -527,7 +528,7 @@ def chaosDialogue():
                                                         kary.fight()
                                                         kraken.fight()
                                                         tiamat.fight()
-                                                        print("CHAOS: YOU DARE KILL MY WIFE AND CHILDREN??? I WILL KILL YOU AND KICK YOU IN THE HINEY!")
+                                                        print("CHAOS: YOU DARE KILL MY WIFE AND CHILDREN??? I WILL KILL YOU AND KICK YOU IN THE HINEY!") #
                                                         print("1: i don't care")
                                                         print("CHAOS: you wanna do it the hard way? i'll feed you oatmeal raisin cookies for eternity!")
                                                         print("1: n-no don't do this to me")

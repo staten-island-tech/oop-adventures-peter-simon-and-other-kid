@@ -7,13 +7,14 @@ def test(prob):
     return random.randint(0,1) > prob
 
 
-typing_speed = 150 #wpm
 class Output:
+    def __init__(self,typing_speed):
+        self.typing_speed = typing_speed
     def output(self,t):
         for l in t:
             sys.stdout.write(l)
             sys.stdout.flush()
-            time.sleep(random.random()*10.0/typing_speed)
+            time.sleep(random.random()*10.0/self.typing_speed)
         print('')
 
    
@@ -22,8 +23,9 @@ class Output:
 
 
 class User:
+    user_output = Output(130)
     def __init__(self):
-        self.name = input("Hello Adventurer! What is your name? ")
+        self.name = ""
         self.hp = 100 
         self.hp_t = 100
         self.exp = 0 
@@ -35,38 +37,37 @@ class User:
         self.magic_num = 0
 
     def change_hp(HP):
-        output(hp)
+        user_output(hp)
         if HP + hp > hp_t:
             HP = (HP + hp) - hp_t
-            output("You have reached your maximum hp! ")
+            user_output("You have reached your maximum hp! ")
         hp += HP
         if HP > 0:
-            output(f"Your hp was increased by {abs(HP)} ")
+            user_output(f"Your hp was increased by {abs(HP)} ")
         if HP < 0:
-            output(f"Your hp was decreased by {abs(HP)} ")
-        output(f"Your current hp is {hp}")
+            user_output(f"Your hp was decreased by {abs(HP)} ")
+        user_output(f"Your current hp is {hp}")
 
     def change_exp(EXP):
         exp += EXP
         if EXP >= 0:
-            output(f"Your exp increased by {abs(EXP)}")
-        output(f"Your new exp is {exp} ")
+            user_output(f"Your exp increased by {abs(EXP)}")
+        user_output(f"Your new exp is {exp} ")
 
     def change_gold(GOLD):
         if gold - GOLD < 0:
-            output("You do not have enough gold for this item")
+            user_output("You do not have enough gold for this item")
         else:
             gold += GOLD
             if GOLD > 0:
-                output(f"You gained {abs(GOLD)} gold")
+                user_output(f"You gained {abs(GOLD)} gold")
             if GOLD < 0:
-                output(f"You lost {abs(GOLD)} gold")
-        output(f"You have {gold} gold left")
+                user_output(f"You lost {abs(GOLD)} gold")
+        user_output(f"You have {gold} gold left")
     def die(self):
         print("Game Over!")
         exit()
 
-user = User()
 class weapon:
     def __init__(self,power,hit,name):
         self.power = power
@@ -81,6 +82,7 @@ class weapon:
     
     
 class monster:
+    fight_attacked_output = Output(200)
     def __init__(self,hp,power,hit,level,name,weapon):
         self.hp = hp
         self.power = power
@@ -91,17 +93,17 @@ class monster:
         self.weapon = weapon
     def attacked(self):
         random_p = int(power * (random.randint(80, 120)/100))
-        output(f"The {self.name} takes {random_p} damage")
+        fight_attacked_output(f"The {self.name} takes {random_p} damage")
         self.hp -= random_p
         if self.hp < 0:
             self.hp = 0
-        output(f"The {self.name}'s new hp is {self.hp}")
+        fight_attacked_output(f"The {self.name}'s new hp is {self.hp}")
 
     def attack(self):
         global hp
         random_p = int(self.power * (random.randint(80, 120)/100))
         if random.random() < self.hit:
-            output(f"You take {random_p} damage")
+            fight_attacked_output(f"You take {random_p} damage")
             hp -= random_p
             if hp < 0:
                 die()
@@ -112,18 +114,18 @@ class monster:
         global hp
         global magic_num
         while hp > 0 and self.hp > 0:
-            output(f"Your HP: {hp}")
-            output(f"{self.name}'s HP: {self.hp}")
+            fight_attacked_output(f"Your HP: {hp}")
+            fight_attacked_output(f"{self.name}'s HP: {self.hp}")
             move = False
             while move == False:
                 choice = int(input("1. Attack 2. Magic"))
                 if choice == 1:
-                    output(f"You attack the {self.name}")
+                    fight_attacked_output(f"You attack the {self.name}")
                     self.attacked()
                     move = True
                 if choice == 2:
                     if magic_num < 1:
-                        output("You havent learned any magic yet")
+                        fight_attacked_output("You havent learned any magic yet")
                     else:
                         if magic_num > 0:
                             print("1.Fire",end=" ")
@@ -144,8 +146,8 @@ class monster:
                                 hp += heal
                                 if hp > hp_t:
                                     hp = hp_t
-                                output(f"You gained {heal} hp")
-                                output(f"Your new hp is {hp}")
+                                fight_attacked_output(f"You gained {heal} hp")
+                                fight_attacked_output(f"Your new hp is {hp}")
                             else: 
                                 self.magic(magic_choice)
                         else: 
@@ -153,7 +155,7 @@ class monster:
             if(self.hp > 0):
                 if(self.check_stun() == False):
 
-                    output(f"The {self.name} {self.weapon}")
+                    fight_attacked_output(f"The {self.name} {self.weapon}")
                     self.attack()
                 else:
                     print(f"The {self.name} is stunned!")
@@ -161,24 +163,24 @@ class monster:
         if num == 1:
             random_p =20 + random.randint(1,10)
             self.hp -= random_p
-            output(f"The {self.name} takes {random_p} damage")
+            fight_attacked_output(f"The {self.name} takes {random_p} damage")
         if num == 2:
             self.hit -= 0.3
-            output("Darkness applied")
+            fight_attacked_output("Darkness applied")
         if num == 4:
             if self.level < 5:
                 self.stun = True
             else:
-                output("Stun is ineffective")
+                fight_attacked_output("Stun is ineffective")
         if num == 5:
             random_p = 100 + random.randint(1,100)
             self.hp -= random_p
-            output(f"The {self.name} takes {random_p} damage")
+            fight_attacked_output(f"The {self.name} takes {random_p} damage")
 
     def check_stun(self):
         if self.stun == True:
             if(self.level > 4):
-                output(f"{self.name} is cured from stun!")
+                fight_attacked_output(f"{self.name} is cured from stun!")
                 self.stun = False
                 self.level = 6
                 return False
@@ -199,7 +201,7 @@ class boss(monster):
         if test(self.magic):
             change_hp(nuke_damage)
         else:
-            output("Nuke was ineffective")
+            fight_attacked_output("Nuke was ineffective")
  """
 class armor:
     def __init__(self,bonus,name):

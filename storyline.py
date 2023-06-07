@@ -3,11 +3,12 @@
 # from attack import * # If we test it in main we can just import everything from each file so we don't have any problems. We have no reason to import everything from each individual file
 # from beemovie import *
 
-from actions import change_hp, change_gold, hp, hp_t, gold # comma
+from classes import User
+from classes import bartender, troll, wolf, bone, lich, wizard, worm, medusa, kary, kraken, tiamat, chaos
 # from classes import monsters
 # from classes import bartender, troll, wolf, bone, lich, wizard, worm, medusa, kary, kraken, tiamat, chaos
 
-class storyline:
+class Dialogue:
     def shop():
         dialogue = 5
         while dialogue > 4 or dialogue < 1:
@@ -66,7 +67,7 @@ class storyline:
                             equipChoice = int(input('You now have Iron Sword. Equip sword? 1: Yes, 2: No'))
                         change_gold(-50)
                         if equipChoice == 1:
-                            # iron.equip() Revert these lines to actual code once I import them (ctrl+/)
+                            iron.equip()
                             print("BARTENDER: Congrats. Now go home and cry yourself to sleep.")
                         elif equipChoice == 2:
                             print('Nothing happens.')                   
@@ -79,7 +80,7 @@ class storyline:
                             equipChoice = int(input('You now have Silver Sword. Equip sword? 1: Yes, 2: No'))
                         change_gold(-100)
                         if equipChoice == 1:
-                            # silver.equip() 
+                            silver.equip() 
                             print("congralutation")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -92,7 +93,7 @@ class storyline:
                             equipChoice = int(input('You now have Titanium Sword. Equip sword? 1: Yes, 2: No'))
                         change_gold(-200)
                         if equipChoice == 1:
-                            # titanium.equip()
+                            titanium.equip()
                             print("congratulations")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -105,7 +106,7 @@ class storyline:
                             equipChoice = int(input('You now have Gold Sword. Equip sword? 1: Yes, 2: No'))
                         change_gold(-350)
                         if equipChoice == 1:
-                            # gold.equip()
+                            gold.equip()
                             print("poopy")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -118,7 +119,7 @@ class storyline:
                             equipChoice = int(input('You now have Diamond Sword. Equip sword? 1: Yes, 2: No'))
                         change_gold(-500)
                         if equipChoice == 1:
-                            # diamond.equip()
+                            diamond.equip()
                             print("you now prossess diamond... whatever... dairy queen...")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -136,7 +137,7 @@ class storyline:
                             equipChoice = int(input('You now have Leather Armor. Equip armor? 1: Yes, 2: No'))
                         change_gold(-100)
                         if equipChoice == 1:
-                            # leather.equip()
+                            leather.equip()
                             print("comment 139 if you like dairy queen")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -149,7 +150,7 @@ class storyline:
                             equipChoice = int(input('You now have Iron Armor. Equip armor? 1: Yes, 2: No'))
                         change_gold(-200)
                         if equipChoice == 1:
-                            # iron.equip()
+                            iron.equip()
                             print("mcdonalds")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -162,7 +163,7 @@ class storyline:
                             equipChoice = int(input('You now have Silver Armor. Equip armor? 1: Yes, 2: No'))
                         change_gold(-300)
                         if equipChoice == 1:
-                            # silver.equip()
+                            silver.equip()
                             print("ag")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -175,7 +176,7 @@ class storyline:
                             equipChoice = int(input('You now have Titanium Armor. Equip armor? 1: Yes, 2: No'))
                         change_gold(-400)
                         if equipChoice == 1:
-                            # titanium.equip()
+                            titanium.equip()
                             print("a squared = b squared + c squared - 2 bc cos a")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -188,7 +189,7 @@ class storyline:
                             equipChoice = int(input('You now have Gold Armor. Equip armor? 1: Yes, 2: No'))
                         change_gold(-500)
                         if equipChoice == 1:
-                            # gold.equip()
+                            gold.equip()
                             print("by the power vested in me i sentence the inventor of clamshell packaging to PRISON for one billion years")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -201,7 +202,7 @@ class storyline:
                             equipChoice = int(input('You now have Diamond Armor. Equip armor? 1: Yes, 2: No'))
                         change_gold(-600)
                         if equipChoice == 1:
-                            # diamond.equip()
+                            diamond.equip()
                             print("one hundred thousand")
                         elif equipChoice == 2:
                             print('Nothing happens.')
@@ -211,8 +212,7 @@ class storyline:
             print('BARTENDER: Change your diaper on the way out.')
             return
         elif dialogue == 4:
-            # bartender.attack()
-            print("FIGH- wait where're you going")
+            bartender.attack()
 
     shop()
 
@@ -625,7 +625,6 @@ class storyline:
                                                             print("1: NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!")
                                                             print("CHAOS: that is if i win")
                                                             print('1: alright bring it on!')
-    chaosDialogue()
 
 # def swap():
 #     x = float(input("type a number"))

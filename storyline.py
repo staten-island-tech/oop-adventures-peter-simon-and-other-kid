@@ -119,7 +119,7 @@ class storyline:
                         change_gold(-500)
                         if equipChoice == 1:
                             # diamond.equip()
-                            print("you now prossess diamond... whatever... dairy queen...")
+                            print("you now prossess diamond... whatever... dairy queen...") # they have the best shakes
                         elif equipChoice == 2:
                             print('Nothing happens.')
                     elif gold < 500:
